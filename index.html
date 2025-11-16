@@ -1,0 +1,3149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Smart HR Pro">
+    <meta name="theme-color" content="#1e5a8e">
+    <title>Smart HR Pro - Your Strategic HR Partner</title>
+    
+    <!-- Professional Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23132b4d;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23047857;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='18' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-size='48' font-weight='900' fill='white' text-anchor='middle'%3EHR%3C/text%3E%3C/svg%3E">
+    <link rel="alternate icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJYSURBVHgB7ZdNSBRRGIbfmZ1xHMcZR3FERBHEIKKDRBBBLYoWLaJFi6BVixbtWrRo0aJFixYtWrRo0aJFixYtWrRo0aJFixYtWgQRRFBEEEXz/3vfN84M4zjqzIyL6IEHL8w3933vvO/3zYwQhmEYhmEYhmEYhmH8X5AQDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwjP8LUsIwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMP4vyAlDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMw/i9ICcMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwjP8LUsIwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDOP/gpQwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMP4vyAlDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMw/i9ICcMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwjP8LUsIwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDOP/gpQwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMP4vyAlDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMw/i9ICcMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwjP8LUsIwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDOP/gpQwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMP4vyAlDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMw/i9ICcMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwjP8LUsIwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDOP/gpQwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMP4vyAlDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMw/i9ICcMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwjP8LvwHpSvQ3h6h3GQAAAABJRU5ErkJggg==">
+    
+    <!-- Open Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--slate-900);
+            background: var(--slate-100);
+            line-height: 1.3;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Mobile App-like Experience */
+        @supports(padding: max(0px)) {
+            body {
+                padding-left: max(0px, env(safe-area-inset-left));
+                padding-right: max(0px, env(safe-area-inset-right));
+            }
+        }
+
+        :root {
+            --primary: #142b4b;
+            --primary-light: #1e3d61;
+            --primary-dark: #0d1f35;
+            --secondary: #186c77;
+            --accent: #22909d;
+            --blue-600: #1e3d61;
+            --blue-700: #142b4b;
+            --blue-800: #0d1f35;
+            --cyan-500: #186c77;
+            --cyan-600: #14525b;
+            --emerald-500: #10b981;
+            --emerald-600: #059669;
+            --emerald-700: #047857;
+            --purple-500: #a855f7;
+            --purple-600: #9333ea;
+            --orange-500: #f97316;
+            --orange-600: #ea580c;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-600: #475569;
+            --slate-400: #94a3b8;
+            --slate-200: #e2e8f0;
+            --slate-100: #f8fafc;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #142b4b 0%, #186c77 100%);
+            --gradient-dark: linear-gradient(135deg, #0d1f35 0%, #14525b 100%);
+            --gradient-emerald: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --gradient-purple: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+            --gradient-orange: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            --gradient-cyan: linear-gradient(135deg, #186c77 0%, #22909d 100%);
+        }
+
+        body.dark {
+            --slate-900: #f8fafc;
+            --slate-800: #e2e8f0;
+            --slate-100: #1e293b;
+            --slate-200: #334155;
+            --white: #0f172a;
+            background: linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+        }
+
+        body.dark .card {
+            background: #1e293b;
+            border-color: #334155;
+            color: #f8fafc;
+        }
+
+        body.dark .card h3 {
+            color: #f8fafc;
+        }
+
+        body.dark .card-desc {
+            color: #cbd5e1;
+        }
+
+        body.dark .list li {
+            color: #cbd5e1;
+        }
+
+        body.dark .portal {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark .portal h3 {
+            color: #f8fafc;
+        }
+
+        body.dark .portal-desc,
+        body.dark .portal-name {
+            color: #cbd5e1;
+        }
+
+        body.dark .sec-head h2 {
+            color: #f8fafc;
+        }
+
+        body.dark .sec-head p {
+            color: #cbd5e1;
+        }
+
+        body.dark header {
+            background: rgba(15, 23, 42, 0.98);
+        }
+
+        body.dark .contact-item {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark .contact-info h4 {
+            color: #f8fafc;
+        }
+
+        body.dark .contact-info p {
+            color: #cbd5e1;
+        }
+
+        body.dark .form-wrap {
+            background: #1e293b;
+        }
+
+        body.dark .field label {
+            color: #f8fafc;
+        }
+
+        body.dark .field input,
+        body.dark .field select,
+        body.dark .field textarea {
+            background: #0f172a;
+            border-color: #334155;
+            color: #f8fafc;
+        }
+
+        body.dark .badge {
+            background: rgba(24, 108, 119, 0.2);
+            color: #22909d;
+        }
+
+        /* Urgency Section Dark Mode */
+        body.dark .urgency-section {
+            background: #1e293b !important;
+            border-left-color: #ef4444 !important;
+        }
+
+        body.dark .urgency-section .card {
+            background: #0f172a !important;
+        }
+
+        body.dark .urgency-section h2 {
+            color: #fca5a5 !important;
+        }
+
+        body.dark .urgency-section p {
+            color: #cbd5e1 !important;
+        }
+
+        body.dark .urgency-cta {
+            background: #0f172a !important;
+        }
+
+        body.dark .urgency-cta h3 {
+            color: #fca5a5 !important;
+        }
+
+        /* Header Dark Mode Fix */
+        body.dark header {
+            background: rgba(15, 23, 42, 0.98);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        body.dark .logo-info h1 {
+            color: #f8fafc;
+        }
+
+        body.dark .logo-info p {
+            color: #cbd5e1;
+        }
+
+        body.dark nav a {
+            color: #cbd5e1;
+        }
+
+        body.dark nav a:hover,
+        body.dark nav a.active {
+            color: #22909d;
+        }
+
+        body.dark .icon-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #cbd5e1;
+        }
+
+        body.dark .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--slate-900);
+            background: linear-gradient(to bottom, #f8fafc 0%, #f1f5f9 100%);
+            line-height: 1.2;
+            overflow-x: hidden;
+        }
+
+        body.rtl {
+            direction: rtl;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* Ultra-Compact Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body.dark header {
+            background: rgba(15, 23, 42, 0.95);
+        }
+
+        .header-wrap {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0.5rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Sharp Logo Section */
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .logo-area:hover {
+            transform: translateX(3px);
+        }
+
+        /* Ultra-Sharp SVG Logo */
+        .logo-image {
+            width: 56px;
+            height: 56px;
+            border-radius: 0;
+            transition: all 0.3s ease;
+        }
+
+        .logo-area:hover .logo-image {
+            transform: scale(1.05);
+        }
+
+        .logo-info h1 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            line-height: 1;
+            margin-bottom: 0.2rem;
+        }
+
+        .logo-info p {
+            font-size: 0.7rem;
+            color: var(--slate-600);
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--slate-700);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+            position: relative;
+            padding: 0.4rem 0.6rem;
+            border-radius: 6px;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--blue-600);
+            background: rgba(14, 165, 233, 0.05);
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        nav a.active {
+            color: var(--primary-light);
+            background: rgba(45, 122, 184, 0.1);
+            font-weight: 700;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border: none;
+            border-radius: 8px;
+            background: transparent;
+            color: var(--slate-700);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-btn:hover {
+            background: var(--slate-200);
+            color: var(--blue-600);
+            transform: scale(1.1);
+        }
+
+        .primary-btn {
+            padding: 0.6rem 1.4rem;
+            border: none;
+            border-radius: 10px;
+            background: var(--gradient);
+            color: white;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+            letter-spacing: 0.01em;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(14, 165, 233, 0.4);
+        }
+
+        .menu-btn {
+            display: none;
+        }
+
+        /* Page Tabs - More Visible & Colorful */
+        .tabs {
+            position: fixed;
+            top: 74px;
+            left: 0;
+            right: 0;
+            background: var(--gradient);
+            box-shadow: 0 4px 20px rgba(20, 43, 75, 0.3);
+            z-index: 1001;
+            border-bottom: 3px solid rgba(24, 108, 119, 0.5);
+            touch-action: manipulation;
+        }
+
+        .tabs-wrap {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            background: transparent;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            border-bottom: 3px solid transparent;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+            touch-action: manipulation;
+            min-height: 56px;
+        }
+
+        .tab-btn i {
+            margin-right: 0.6rem;
+            font-size: 1.1rem;
+        }
+
+        body.rtl .tab-btn i {
+            margin-right: 0;
+            margin-left: 0.6rem;
+        }
+
+        .tab-btn:hover {
+            color: #22909d;
+            background: rgba(34, 144, 157, 0.15);
+        }
+
+        .tab-btn.active {
+            color: white;
+            background: rgba(24, 108, 119, 0.4);
+            border-bottom-color: #22909d;
+        }
+
+        @media (max-width: 768px) {
+            .tabs {
+                z-index: 1001;
+                top: 70px;
+            }
+
+            .tab-btn {
+                font-size: 0.95rem;
+                padding: 0.9rem 1rem;
+                min-height: 52px;
+            }
+
+            .tab-btn i {
+                font-size: 1rem;
+            }
+        }
+
+        /* Page Container */
+        .page-wrap {
+            display: none;
+            margin-top: 130px;
+        }
+
+        .page-wrap.active {
+            display: block;
+        }
+
+        /* Compact Hero */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 3rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.08) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #fbbf24;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.2;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .hero-btn {
+            padding: 0.85rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            letter-spacing: 0.01em;
+        }
+
+        .hero-btn-1 {
+            background: white;
+            color: var(--blue-700);
+        }
+
+        .hero-btn-1:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+        }
+
+        .hero-btn-2 {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.4);
+        }
+
+        .hero-btn-2:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-3px);
+            border-color: rgba(255,255,255,0.6);
+        }
+
+        /* Ultra-Compact Sections */
+        .sec {
+            padding: 3rem 1.5rem;
+        }
+
+        .sec:nth-child(odd) {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+
+        .sec:nth-child(even) {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        }
+
+        .sec-head {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .sec-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 1.2rem;
+            background: var(--gradient);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .sec-head h2 {
+            font-size: 1.8rem;
+            color: var(--slate-900);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+        }
+
+        .sec-head p {
+            font-size: 1rem;
+            color: var(--slate-600);
+            line-height: 1.2;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Service Cards with Advanced Hover Effects */
+        .grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 24px rgba(14, 165, 233, 0.2);
+            border-color: var(--blue-600);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Colorful icon variations */
+        .card:nth-child(1) .card-icon { background: linear-gradient(135deg, #142b4b 0%, #1e3d61 100%); }
+        .card:nth-child(2) .card-icon { background: linear-gradient(135deg, #186c77 0%, #22909d 100%); }
+        .card:nth-child(3) .card-icon { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+        .card:nth-child(4) .card-icon { background: linear-gradient(135deg, #142b4b 0%, #186c77 100%); }
+        .card:nth-child(5) .card-icon { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); }
+        .card:nth-child(6) .card-icon { background: linear-gradient(135deg, #186c77 0%, #10b981 100%); }
+        .card:nth-child(7) .card-icon { background: linear-gradient(135deg, #1e3d61 0%, #14525b 100%); }
+        .card:nth-child(8) .card-icon { background: linear-gradient(135deg, #0d1f35 0%, #186c77 100%); }
+
+        .card:hover .card-icon {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 4px 16px rgba(14, 165, 233, 0.4);
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            color: var(--slate-900);
+            margin-bottom: 0.6rem;
+            font-weight: 500;
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(20, 43, 75, 0.1);
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            line-height: 1;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--slate-600);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .list li {
+            padding: 0.35rem 0 0.35rem 1.8rem;
+            position: relative;
+            color: var(--slate-600);
+            font-size: 0.88rem;
+            line-height: 1.2;
+            transition: all 0.2s ease;
+        }
+
+        .list li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0.35rem;
+            color: #186c77;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .card:hover .list li {
+            color: var(--slate-700);
+        }
+
+        .card:hover .list li::before {
+            transform: scale(1.15);
+            color: #142b4b;
+        }
+
+        body.rtl .list li {
+            padding: 0.5rem 1.8rem 0.5rem 0;
+        }
+
+        body.rtl .list li::before {
+            left: auto;
+            right: 0;
+        }
+
+        /* Portal Cards with Flip Effect */
+        .portal {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.8rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .portal:hover {
+            border-color: var(--blue-600);
+            transform: translateY(-5px) rotateY(5deg);
+            box-shadow: 0 8px 24px rgba(14, 165, 233, 0.2);
+        }
+
+        .portal-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1rem;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Colorful portal icon variations */
+        .portal:nth-child(1) .portal-icon { background: linear-gradient(135deg, #142b4b 0%, #1e3d61 100%); }
+        .portal:nth-child(2) .portal-icon { background: linear-gradient(135deg, #186c77 0%, #22909d 100%); }
+        .portal:nth-child(3) .portal-icon { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+        .portal:nth-child(4) .portal-icon { background: linear-gradient(135deg, #142b4b 0%, #186c77 100%); }
+        .portal:nth-child(5) .portal-icon { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); }
+        .portal:nth-child(6) .portal-icon { background: linear-gradient(135deg, #186c77 0%, #10b981 100%); }
+        .portal:nth-child(7) .portal-icon { background: linear-gradient(135deg, #1e3d61 0%, #14525b 100%); }
+        .portal:nth-child(8) .portal-icon { background: linear-gradient(135deg, #0d1f35 0%, #186c77 100%); }
+
+        .portal:hover .portal-icon {
+            transform: scale(1.2) rotate(15deg);
+            box-shadow: 0 4px 16px rgba(14, 165, 233, 0.4);
+        }
+
+        .portal h3 {
+            font-size: 1.15rem;
+            color: var(--slate-900);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .portal-name {
+            font-size: 0.8rem;
+            color: var(--slate-600);
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+            line-height: 1.2;
+        }
+
+        .portal-desc {
+            font-size: 0.85rem;
+            color: var(--slate-600);
+            line-height: 1.2;
+        }
+
+        /* Super Attractive Contact Section */
+        .contact-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 16px rgba(14, 165, 233, 0.2);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            flex-shrink: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .contact-item:hover .contact-icon {
+            transform: scale(1.15) rotate(10deg);
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+            color: var(--slate-900);
+            font-weight: 600;
+        }
+
+        .contact-info p {
+            color: var(--slate-600);
+            font-size: 0.88rem;
+            line-height: 1.4;
+        }
+
+        .contact-info a {
+            color: var(--blue-600);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--blue-700);
+        }
+
+        /* SUPER ATTRACTIVE ANIMATED FORM */
+        .form-wrap {
+            background: linear-gradient(135deg, var(--white) 0%, #f0f9ff 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(14, 165, 233, 0.15);
+            border: 2px solid rgba(14, 165, 233, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .form-wrap:hover {
+            box-shadow: 0 12px 40px rgba(14, 165, 233, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .field {
+            margin-bottom: 1.2rem;
+        }
+
+        .field label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--slate-900);
+            font-size: 0.9rem;
+            letter-spacing: 0.01em;
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--slate-200);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+            color: var(--slate-900);
+        }
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            outline: none;
+            border-color: var(--blue-600);
+            box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .field textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
+            letter-spacing: 0.02em;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(14, 165, 233, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* Compact Footer */
+        footer {
+            background: var(--gradient);
+            color: white;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.4;
+        }
+
+        .footer-top {
+            padding: 3rem 1.5rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-brand {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-brand-info h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .footer-brand-info p {
+            opacity: 0.95;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .footer-tagline {
+            max-width: 600px;
+            opacity: 0.85;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .footer-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+            padding: 3rem 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-sec h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .footer-sec h4 i {
+            font-size: 1.2rem;
+            color: #22909d;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.7rem;
+        }
+
+        .footer-links a,
+        .footer-links li {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a i {
+            font-size: 0.8rem;
+            color: #22909d;
+            transition: all 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-links a:hover i {
+            color: white;
+            transform: translateX(3px);
+        }
+
+        body.rtl .footer-links a:hover {
+            padding-left: 0;
+            padding-right: 5px;
+        }
+
+        body.rtl .footer-links a:hover i {
+            transform: translateX(-3px);
+        }
+
+        .footer-contact-list {
+            list-style: none;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-contact-item i {
+            font-size: 1.2rem;
+            color: #22909d;
+            margin-top: 0.2rem;
+        }
+
+        .footer-contact-item strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 0.85rem;
+        }
+
+        .footer-contact-item p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .footer-contact-item a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .footer-contact-item a:hover {
+            color: #22909d;
+        }
+
+        .footer-social {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-social h5 {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .social-icons a {
+            width: 42px;
+            height: 42px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1.1rem;
+        }
+
+        .social-icons a:hover {
+            background: #22909d;
+            transform: translateY(-4px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(34, 144, 157, 0.4);
+        }
+
+        .footer-certifications {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .cert-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .cert-item i {
+            font-size: 2rem;
+            color: #22909d;
+        }
+
+        .cert-item strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+        }
+
+        .cert-item p {
+            margin: 0;
+            opacity: 0.85;
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom {
+            padding: 2rem 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-bottom-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-copy p {
+            opacity: 0.85;
+            font-size: 0.9rem;
+        }
+
+        .footer-links-bottom {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links-bottom a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-size: 0.85rem;
+        }
+
+        .footer-links-bottom a:hover {
+            color: white;
+        }
+
+        .footer-links-bottom span {
+            opacity: 0.5;
+        }
+
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .footer-certifications {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-brand {
+                text-align: center;
+            }
+
+            .footer-tagline {
+                margin: 0 auto;
+            }
+
+            .footer-brand-info h3 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 1.5rem;
+            }
+
+            .footer-certifications {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links-bottom {
+                justify-content: center;
+            }
+        }
+
+        /* Scroll Top */
+        .scroll-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scroll-btn.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-btn:hover {
+            transform: translateY(-4px) scale(1.1);
+            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+
+            .grid {
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-wrap {
+                padding: 0.5rem 1rem;
+            }
+
+            .tabs {
+                top: 70px;
+            }
+
+            .tab-btn {
+                padding: 0.9rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .tab-btn i {
+                margin-right: 0.4rem;
+                font-size: 1rem;
+            }
+
+            .page-wrap {
+                margin-top: 125px;
+            }
+
+            .hero {
+                padding: 2.5rem 1.2rem;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+                line-height: 1.3;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .sec {
+                padding: 2.5rem 1.2rem;
+            }
+
+            .sec-head {
+                margin-bottom: 2rem;
+            }
+
+            .sec-head h2 {
+                font-size: 1.5rem;
+            }
+
+            .sec-head p {
+                font-size: 0.95rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+
+            .card {
+                padding: 1.3rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-grid {
+                gap: 1.5rem;
+            }
+
+            .form-wrap {
+                padding: 1.5rem;
+            }
+
+            nav {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1.5rem;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+                transition: left 0.3s ease;
+                z-index: 1000;
+            }
+
+            body.dark nav {
+                background: #1e293b;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+            }
+
+            nav a {
+                width: 100%;
+                padding: 0.8rem 1rem;
+                font-size: 0.95rem;
+            }
+
+            nav.show {
+                left: 0;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .logo-image {
+                width: 54px;
+                height: 54px;
+            }
+
+            .logo-info h1 {
+                font-size: 1rem;
+            }
+
+            .logo-info p {
+                font-size: 0.65rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-btn {
+                width: 100%;
+            }
+
+            .tab-btn {
+                font-size: 0.85rem;
+                padding: 0.8rem 0.6rem;
+            }
+
+            .card {
+                padding: 1.2rem;
+            }
+
+            .card h3 {
+                font-size: 1.05rem;
+            }
+
+            .sec-head h2 {
+                font-size: 1.3rem;
+            }
+
+            .contact-item {
+                padding: 0.9rem;
+            }
+
+            .portal {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-wrap">
+            <div class="logo-area" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+                <img src="data:image/png;base64,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" alt="Smart HR Pro Logo" class="logo-image">
+                <div class="logo-info">
+                    <h1>Smart HR Pro</h1>
+                    <p class="en">Your strategic HR partner</p>
+                    <p class="ar" style="display:none">شريكك الاستراتيجي للموارد البشرية</p>
+                </div>
+            </div>
+            <nav id="nav">
+                <a href="javascript:switchTab('employers')" class="en">For Companies</a>
+                <a href="javascript:switchTab('employees')" class="en">For Individuals</a>
+                <a href="javascript:goTo('contact')" class="en">Contact</a>
+                <a href="javascript:switchTab('employers')" class="ar" style="display:none">للشركات</a>
+                <a href="javascript:switchTab('employees')" class="ar" style="display:none">للأفراد</a>
+                <a href="javascript:goTo('contact')" class="ar" style="display:none">اتصل بنا</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn" onclick="toggleLang()" title="Language">
+                    <i class="fas fa-language"></i>
+                </button>
+                <button class="icon-btn" id="theme" onclick="toggleTheme()" title="Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="primary-btn" onclick="goTo('contact')">
+                    <span class="en">Get Started</span>
+                    <span class="ar" style="display:none">ابدأ الآن</span>
+                </button>
+                <button class="icon-btn menu-btn" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Tabs -->
+    <div class="tabs">
+        <div class="tabs-wrap">
+            <button class="tab-btn active" onclick="switchTab('employers')" id="tab1">
+                <i class="fas fa-building"></i>
+                <span class="en">For Companies</span>
+                <span class="ar" style="display:none">للشركات</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab('employees')" id="tab2">
+                <i class="fas fa-users"></i>
+                <span class="en">For Individuals</span>
+                <span class="ar" style="display:none">للأفراد</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- EMPLOYERS PAGE -->
+    <div class="page-wrap active" id="employers">
+        <!-- Hero -->
+        <section class="hero" id="home-employers">
+            <div class="hero-content">
+                <h1 class="en">Complete Business Setup & HR Management Solutions in Saudi Arabia</h1>
+                <h1 class="ar" style="display:none">حلول شاملة لإنشاء الأعمال وإدارة الموارد البشرية في المملكة</h1>
+                
+                <p class="tagline en">From Company Formation to Full HR Operations - We Handle Everything</p>
+                <p class="tagline ar" style="display:none">من تأسيس الشركة إلى العمليات الكاملة للموارد البشرية - نتعامل مع كل شيء</p>
+                
+                <p class="en">No need to hire expensive in-house HR! We provide complete remote HR services from scratch - company formation, all government licenses, registrations, compliance, employee management, and ongoing HR operations. Quick, reliable, affordable services across all Saudi cities with multilingual support.</p>
+                <p class="ar" style="display:none">لا حاجة لتوظيف موارد بشرية داخلية باهظة الثمن! نقدم خدمات موارد بشرية عن بعد كاملة من الصفر - تأسيس الشركة، جميع التراخيص الحكومية، التسجيلات، الامتثال، إدارة الموظفين، والعمليات المستمرة للموارد البشرية.</p>
+                
+                <div class="hero-btns">
+                    <button class="hero-btn hero-btn-1" onclick="goTo('contact')">
+                        <span class="en">Start Your Business Today</span>
+                        <span class="ar" style="display:none">ابدأ عملك اليوم</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="hero-btn hero-btn-2" onclick="goTo('services')">
+                        <span class="en">Explore Services</span>
+                        <span class="ar" style="display:none">استكشف الخدمات</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="sec" style="background: linear-gradient(135deg, rgba(20, 43, 75, 0.05) 0%, rgba(24, 108, 119, 0.05) 100%);">
+            <div class="sec-head">
+                <span class="sec-tag">
+                    <i class="fas fa-star"></i>
+                    <span class="en">WHY SMART HR PRO?</span>
+                    <span class="ar" style="display:none">لماذا سمارت اتش ار برو؟</span>
+                </span>
+                <h2 class="en">Your One-Stop Solution for Business Setup & HR Management</h2>
+                <h2 class="ar" style="display:none">حلك الشامل لإنشاء الأعمال وإدارة الموارد البشرية</h2>
+                <p class="en">Save time, money, and resources by outsourcing all your business setup and HR needs to our expert team. We handle everything from company registration to daily HR operations.</p>
+                <p class="ar" style="display:none">وفر الوقت والمال والموارد من خلال الاستعانة بمصادر خارجية لجميع احتياجات إنشاء الأعمال والموارد البشرية لفريق الخبراء لدينا.</p>
+            </div>
+
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3 class="en">Complete Company Formation</h3>
+                    <h3 class="ar" style="display:none">تأسيس شركة كامل</h3>
+                    <p class="card-desc en">We establish your company from scratch - handling all licenses, registrations, and legal requirements according to the latest Saudi regulations. Specialized support for investors through MISA (Ministry of Investment Saudi Arabia).</p>
+                    <p class="card-desc ar" style="display:none">نؤسس شركتك من الصفر - نتعامل مع جميع التراخيص والتسجيلات والمتطلبات القانونية وفقاً لأحدث اللوائح السعودية.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3 class="en">Cost-Effective Remote HR</h3>
+                    <h3 class="ar" style="display:none">موارد بشرية عن بعد فعالة من حيث التكلفة</h3>
+                    <p class="card-desc en">Why hire expensive full-time HR staff? Our remote HR services provide you with complete HR management at a fraction of the cost - 100% online, efficient, and professional.</p>
+                    <p class="card-desc ar" style="display:none">لماذا توظف موظفي موارد بشرية بدوام كامل باهظي الثمن؟ توفر خدماتنا عن بعد إدارة كاملة للموارد البشرية بجزء بسيط من التكلفة.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3 class="en">100% Compliance Guaranteed</h3>
+                    <h3 class="ar" style="display:none">امتثال 100% مضمون</h3>
+                    <p class="card-desc en">Stay protected from legal violations and penalties. We ensure your business complies with all Saudi labor laws, MHRSD regulations, and government requirements.</p>
+                    <p class="card-desc ar" style="display:none">ابق محمياً من الانتهاكات القانونية والعقوبات. نضمن امتثال عملك لجميع قوانين العمل السعودية.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-globe"></i></div>
+                    <h3 class="en">Multilingual Support</h3>
+                    <h3 class="ar" style="display:none">دعم متعدد اللغات</h3>
+                    <p class="card-desc en">We help you manage HR operations in multiple languages - Arabic, English, and more. Serving businesses across all Saudi cities with local expertise.</p>
+                    <p class="card-desc ar" style="display:none">نساعدك في إدارة عمليات الموارد البشرية بلغات متعددة - العربية والإنجليزية والمزيد.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-laptop"></i></div>
+                    <h3 class="en">100% Online Records</h3>
+                    <h3 class="ar" style="display:none">سجلات 100% عبر الإنترنت</h3>
+                    <p class="card-desc en">All your HR documents, policies, contracts, and records maintained digitally and securely. Access your HR data anytime, anywhere.</p>
+                    <p class="card-desc ar" style="display:none">جميع مستندات الموارد البشرية والسياسات والعقود والسجلات محفوظة رقمياً وبشكل آمن.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3 class="en">Labor Dispute Resolution</h3>
+                    <h3 class="ar" style="display:none">حل النزاعات العمالية</h3>
+                    <p class="card-desc en">Expert handling of labor disputes, employee complaints, and MHRSD cases. We represent your interests and ensure fair resolution.</p>
+                    <p class="card-desc ar" style="display:none">معالجة خبيرة للنزاعات العمالية وشكاوى الموظفين وقضايا وزارة الموارد البشرية.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="sec" id="services-employers" style="background:var(--white)">
+            <div class="sec-head">
+                <span class="sec-tag">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="en">OUR COMPLETE SERVICES</span>
+                    <span class="ar" style="display:none">خدماتنا الكاملة</span>
+                </span>
+                <h2 class="en">Full-Spectrum Business & HR Solutions</h2>
+                <h2 class="ar" style="display:none">حلول شاملة للأعمال والموارد البشرية</h2>
+                <p class="en">From establishing your company to managing daily HR operations - we provide end-to-end services through all major Saudi government platforms including Ministry of Commerce, MHRSD, MISA, and more.</p>
+                <p class="ar" style="display:none">من إنشاء شركتك إلى إدارة عمليات الموارد البشرية اليومية - نقدم خدمات شاملة من خلال جميع المنصات الحكومية السعودية الرئيسية.</p>
+            </div>
+
+            <div class="grid">
+                <!-- Company Formation & Business Setup -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-building"></i></div>
+                    <h3 class="en">Complete Company Formation</h3>
+                    <h3 class="ar" style="display:none">تأسيس شركة كامل</h3>
+                    <div class="badge">Ministry of Commerce & MISA</div>
+                    <p class="card-desc en">We establish your company from scratch! Complete business setup services including company registration, choosing the right business activities, Articles of Association drafting, and investor support through MISA (Ministry of Investment Saudi Arabia). Specialized with Ministry of Commerce and Saudi Business Center.</p>
+                    <p class="card-desc ar" style="display:none">نؤسس شركتك من الصفر! خدمات إنشاء أعمال كاملة بما في ذلك تسجيل الشركة واختيار الأنشطة التجارية المناسبة وصياغة عقد التأسيس.</p>
+                    <ul class="list en">
+                        <li>Commercial Registration (CR)</li>
+                        <li>Company name reservation & approval</li>
+                        <li>Articles of Association drafting</li>
+                        <li>Business activity selection & licensing</li>
+                        <li>MISA investor services & support</li>
+                        <li>Ministry of Commerce procedures</li>
+                        <li>Saudi Business Center coordination</li>
+                        <li>Munshat platform registration</li>
+                        <li>Chamber of Commerce membership</li>
+                        <li>Initial share capital documentation</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>السجل التجاري</li>
+                        <li>حجز واعتماد اسم الشركة</li>
+                        <li>صياغة عقد التأسيس</li>
+                        <li>اختيار النشاط التجاري والترخيص</li>
+                        <li>خدمات ودعم المستثمرين عبر وزارة الاستثمار</li>
+                        <li>إجراءات وزارة التجارة</li>
+                        <li>التنسيق مع مركز الأعمال السعودي</li>
+                        <li>تسجيل منصة منشآت</li>
+                        <li>عضوية الغرفة التجارية</li>
+                        <li>توثيق رأس المال الأولي</li>
+                    </ul>
+                </div>
+
+                <!-- All Government Licenses & Registrations -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                    <h3 class="en">All Government Licenses & Permits</h3>
+                    <h3 class="ar" style="display:none">جميع التراخيص والتصاريح الحكومية</h3>
+                    <div class="badge">Complete Licensing Solutions</div>
+                    <p class="card-desc en">One-stop solution for ALL your business licenses and government registrations. We obtain and maintain every license you need according to the latest Saudi regulations - Baladiya (Municipality), National Address, Zakat, VAT, Tax, Civil Defense, and more. Stay 100% compliant!</p>
+                    <p class="card-desc ar" style="display:none">حل شامل لجميع تراخيص عملك والتسجيلات الحكومية. نحصل على كل ترخيص تحتاجه ونحافظ عليه وفقاً لأحدث اللوائح السعودية.</p>
+                    <ul class="list en">
+                        <li>Baladiya (Municipality) license</li>
+                        <li>National Address registration</li>
+                        <li>Zakat, Tax & Income Tax number</li>
+                        <li>VAT registration & license</li>
+                        <li>Civil Defense license & inspection</li>
+                        <li>Chamber of Commerce Certificate (COC)</li>
+                        <li>Saudi Post (SPL) services</li>
+                        <li>Industry-specific licenses</li>
+                        <li>Professional licenses</li>
+                        <li>Annual license renewals</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>رخصة البلدية</li>
+                        <li>تسجيل العنوان الوطني</li>
+                        <li>رقم الزكاة والضريبة والدخل</li>
+                        <li>تسجيل ورخصة ضريبة القيمة المضافة</li>
+                        <li>رخصة وتفتيش الدفاع المدني</li>
+                        <li>شهادة الغرفة التجارية</li>
+                        <li>خدمات البريد السعودي</li>
+                        <li>التراخيص الخاصة بالصناعة</li>
+                        <li>التراخيص المهنية</li>
+                        <li>تجديد التراخيص السنوية</li>
+                    </ul>
+                </div>
+
+                <!-- Remote HR Management Services -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3 class="en">Remote HR Management - No In-House HR Needed!</h3>
+                    <h3 class="ar" style="display:none">إدارة الموارد البشرية عن بعد</h3>
+                    <div class="badge">100% Online HR Operations</div>
+                    <p class="card-desc en">Why hire expensive in-house HR professionals? We provide complete remote HR management services at a fraction of the cost! Handle all your HR operations online - employee onboarding, payroll, attendance, performance management, and more. Quick, reliable, and affordable across all Saudi cities.</p>
+                    <p class="card-desc ar" style="display:none">لماذا توظف محترفي موارد بشرية داخليين باهظي الثمن؟ نقدم خدمات إدارة موارد بشرية عن بعد كاملة بجزء بسيط من التكلفة!</p>
+                    <ul class="list en">
+                        <li>Complete employee lifecycle management</li>
+                        <li>Recruitment & onboarding support</li>
+                        <li>Payroll processing & WPS management</li>
+                        <li>Attendance & leave management</li>
+                        <li>Performance appraisal systems</li>
+                        <li>Employee relations management</li>
+                        <li>Termination & exit procedures</li>
+                        <li>24/7 HR helpdesk support</li>
+                        <li>Multi-language HR services</li>
+                        <li>Services across all Saudi cities</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>إدارة كاملة لدورة حياة الموظف</li>
+                        <li>دعم التوظيف والإعداد</li>
+                        <li>معالجة الرواتب وإدارة حماية الأجور</li>
+                        <li>إدارة الحضور والإجازات</li>
+                        <li>أنظمة تقييم الأداء</li>
+                        <li>إدارة علاقات الموظفين</li>
+                        <li>إجراءات الإنهاء والخروج</li>
+                        <li>دعم مكتب المساعدة للموارد البشرية على مدار الساعة</li>
+                        <li>خدمات موارد بشرية متعددة اللغات</li>
+                        <li>خدمات في جميع المدن السعودية</li>
+                    </ul>
+                </div>
+
+                <!-- HR Documentation & Policies -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3 class="en">HR Documentation & Policy Drafting</h3>
+                    <h3 class="ar" style="display:none">وثائق وسياسات الموارد البشرية</h3>
+                    <div class="badge">100% Online Digital Records</div>
+                    <p class="card-desc en">Comprehensive HR documentation services with 100% online record-keeping! We draft employment contracts, company policies, HR forms, employee handbooks, and maintain all your HR records digitally. Stay organized and compliant with secure cloud storage.</p>
+                    <p class="card-desc ar" style="display:none">خدمات توثيق شاملة للموارد البشرية مع حفظ السجلات 100% عبر الإنترنت! نصيغ عقود العمل وسياسات الشركة ونماذج الموارد البشرية.</p>
+                    <ul class="list en">
+                        <li>Employment contract drafting (Arabic/English)</li>
+                        <li>Company HR policy development</li>
+                        <li>Employee handbook creation</li>
+                        <li>Job description templates</li>
+                        <li>HR forms & templates library</li>
+                        <li>Performance evaluation forms</li>
+                        <li>Leave & attendance policies</li>
+                        <li>Disciplinary procedures documentation</li>
+                        <li>100% digital record management</li>
+                        <li>Secure cloud storage & access</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>صياغة عقود العمل (عربي/إنجليزي)</li>
+                        <li>تطوير سياسات الموارد البشرية للشركة</li>
+                        <li>إنشاء دليل الموظف</li>
+                        <li>قوالب الوصف الوظيفي</li>
+                        <li>مكتبة نماذج وقوالب الموارد البشرية</li>
+                        <li>نماذج تقييم الأداء</li>
+                        <li>سياسات الإجازة والحضور</li>
+                        <li>توثيق إجراءات التأديب</li>
+                        <li>إدارة السجلات الرقمية 100%</li>
+                        <li>التخزين والوصول الآمن على السحابة</li>
+                    </ul>
+                </div>
+
+                <!-- Qiwa -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3 class="en">Qiwa Platform</h3>
+                    <h3 class="ar" style="display:none">منصة قوى</h3>
+                    <div class="badge">Qiwa (قوى) - MHRSD</div>
+                    <p class="card-desc en">Complete Qiwa platform management from Ministry of Human Resources and Social Development. We handle all aspects of your workforce registration, compliance monitoring, and government platform navigation to ensure your business meets all Saudi labor requirements.</p>
+                    <p class="card-desc ar" style="display:none">إدارة كاملة لمنصة قوى من وزارة الموارد البشرية. نتعامل مع جميع جوانب تسجيل القوى العاملة ومراقبة الامتثال والتنقل في المنصة الحكومية لضمان تلبية عملك لجميع متطلبات العمل السعودية.</p>
+                    <ul class="list en">
+                        <li>Employee registration & contracts</li>
+                        <li>Visa issuance & renewal</li>
+                        <li>Work permit applications</li>
+                        <li>Nitaqat compliance</li>
+                        <li>WPS integration</li>
+                        <li>Labor dispute resolution</li>
+                        <li>End-of-service settlements</li>
+                        <li>Real-time compliance reporting</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>تسجيل الموظفين والعقود</li>
+                        <li>إصدار وتجديد التأشيرات</li>
+                        <li>طلبات تصاريح العمل</li>
+                        <li>امتثال نطاقات</li>
+                        <li>تكامل حماية الأجور</li>
+                        <li>حل النزاعات العمالية</li>
+                        <li>تسويات نهاية الخدمة</li>
+                        <li>تقارير الامتثال الفوري</li>
+                    </ul>
+                </div>
+
+                <!-- Mudad -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-file-contract"></i></div>
+                    <h3 class="en">Mudad Contracts</h3>
+                    <h3 class="ar" style="display:none">عقود مدد</h3>
+                    <div class="badge">Mudad (مدد) - Labor Contracts</div>
+                    <p class="card-desc en">Expert labor contract management through Mudad platform.</p>
+                    <p class="card-desc ar" style="display:none">إدارة احترافية لعقود العمل عبر مدد.</p>
+                    <ul class="list en">
+                        <li>Electronic contract drafting</li>
+                        <li>Bilingual contract preparation</li>
+                        <li>Contract amendments</li>
+                        <li>Probation period management</li>
+                        <li>Part-time contracts</li>
+                        <li>Template customization</li>
+                        <li>Digital signatures</li>
+                        <li>Contract database management</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>صياغة العقود الإلكترونية</li>
+                        <li>إعداد عقود ثنائية اللغة</li>
+                        <li>تعديلات العقود</li>
+                        <li>إدارة فترة التجربة</li>
+                        <li>عقود الدوام الجزئي</li>
+                        <li>تخصيص النماذج</li>
+                        <li>التوقيع الرقمي</li>
+                        <li>إدارة قاعدة البيانات</li>
+                    </ul>
+                </div>
+
+                <!-- GOSI -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="en">GOSI Services</h3>
+                    <h3 class="ar" style="display:none">خدمات التأمينات</h3>
+                    <div class="badge">GOSI (التأمينات) - Social Insurance</div>
+                    <p class="card-desc en">Complete social insurance management through GOSI.</p>
+                    <p class="card-desc ar" style="display:none">إدارة كاملة للتأمينات الاجتماعية.</p>
+                    <ul class="list en">
+                        <li>Establishment registration</li>
+                        <li>Employee enrollment</li>
+                        <li>Occupational hazards insurance</li>
+                        <li>Injury processing</li>
+                        <li>Maternity leave claims</li>
+                        <li>Retirement calculations</li>
+                        <li>Inspection preparation</li>
+                        <li>Monthly reconciliation</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>تسجيل المنشآت</li>
+                        <li>تسجيل الموظفين</li>
+                        <li>تأمين الأخطار المهنية</li>
+                        <li>معالجة الإصابات</li>
+                        <li>مطالبات إجازة الأمومة</li>
+                        <li>حسابات التقاعد</li>
+                        <li>التحضير للتفتيش</li>
+                        <li>التسوية الشهرية</li>
+                    </ul>
+                </div>
+
+                <!-- Muqeem -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-passport"></i></div>
+                    <h3 class="en">Muqeem Immigration</h3>
+                    <h3 class="ar" style="display:none">خدمات مقيم</h3>
+                    <div class="badge">Muqeem (مقيم) - Immigration</div>
+                    <p class="card-desc en">Comprehensive immigration and residency services.</p>
+                    <p class="card-desc ar" style="display:none">خدمات شاملة للهجرة والإقامة.</p>
+                    <ul class="list en">
+                        <li>Iqama issuance & renewal</li>
+                        <li>Re-entry visa processing</li>
+                        <li>Exit permit applications</li>
+                        <li>Final exit processing</li>
+                        <li>Dependent visas</li>
+                        <li>Passport renewal</li>
+                        <li>Profession changes</li>
+                        <li>Absher integration</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>إصدار وتجديد الإقامة</li>
+                        <li>معالجة تأشيرات العودة</li>
+                        <li>طلبات تصاريح الخروج</li>
+                        <li>معالجة الخروج النهائي</li>
+                        <li>تأشيرات التابعين</li>
+                        <li>تجديد جواز السفر</li>
+                        <li>تغيير المهنة</li>
+                        <li>التكامل مع أبشر</li>
+                    </ul>
+                </div>
+
+                <!-- MOFA -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-globe"></i></div>
+                    <h3 class="en">MOFA Attestation</h3>
+                    <h3 class="ar" style="display:none">تصديق الخارجية</h3>
+                    <div class="badge">MOFA - Ministry of Foreign Affairs (الخارجية)</div>
+                    <p class="card-desc en">Professional document attestation services.</p>
+                    <p class="card-desc ar" style="display:none">خدمات تصديق احترافية للمستندات.</p>
+                    <ul class="list en">
+                        <li>Educational certificates</li>
+                        <li>Professional certificates</li>
+                        <li>Commercial documents</li>
+                        <li>Personal documents</li>
+                        <li>Embassy coordination</li>
+                        <li>Chamber authentication</li>
+                        <li>Translation & notarization</li>
+                        <li>Express services</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>الشهادات التعليمية</li>
+                        <li>الشهادات المهنية</li>
+                        <li>المستندات التجارية</li>
+                        <li>المستندات الشخصية</li>
+                        <li>تنسيق السفارة</li>
+                        <li>مصادقة الغرفة</li>
+                        <li>الترجمة والتوثيق</li>
+                        <li>الخدمات السريعة</li>
+                    </ul>
+                </div>
+
+                <!-- NAQL -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-truck"></i></div>
+                    <h3 class="en">NAQL Services</h3>
+                    <h3 class="ar" style="display:none">خدمات نقل</h3>
+                    <div class="badge">NAQL (نقل) - Ministry of Transportation</div>
+                    <p class="card-desc en">Professional handling of transport and logistics licensing through NAQL platform under the Transport General Authority (TGA), Ministry of Transportation.</p>
+                    <p class="card-desc ar" style="display:none">معالجة احترافية لتراخيص النقل والخدمات اللوجستية من خلال منصة نقل تحت الهيئة العامة للنقل، وزارة النقل.</p>
+                    <ul class="list en">
+                        <li>Transport license applications</li>
+                        <li>Commercial vehicle registration</li>
+                        <li>Driver permit processing</li>
+                        <li>Fleet management documentation</li>
+                        <li>License renewal services</li>
+                        <li>Compliance verification</li>
+                        <li>TGA platform navigation</li>
+                        <li>Transport sector regulations</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>طلبات تراخيص النقل</li>
+                        <li>تسجيل المركبات التجارية</li>
+                        <li>معالجة تصاريح السائقين</li>
+                        <li>وثائق إدارة الأسطول</li>
+                        <li>خدمات تجديد التراخيص</li>
+                        <li>التحقق من الامتثال</li>
+                        <li>التنقل في منصة الهيئة</li>
+                        <li>لوائح قطاع النقل</li>
+                    </ul>
+                </div>
+
+                <!-- HR Consulting -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="en">HR Consulting</h3>
+                    <h3 class="ar" style="display:none">الاستشارات</h3>
+                    <p class="card-desc en">Strategic HR development services.</p>
+                    <p class="card-desc ar" style="display:none">خدمات تطوير استراتيجية الموارد البشرية.</p>
+                    <ul class="list en">
+                        <li>HR policy development</li>
+                        <li>Organizational design</li>
+                        <li>Compensation strategy</li>
+                        <li>Performance management</li>
+                        <li>Talent acquisition</li>
+                        <li>Employee engagement</li>
+                        <li>HR analytics</li>
+                        <li>Change management</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>تطوير سياسات الموارد</li>
+                        <li>التصميم التنظيمي</li>
+                        <li>استراتيجية التعويضات</li>
+                        <li>إدارة الأداء</li>
+                        <li>اكتساب المواهب</li>
+                        <li>مشاركة الموظفين</li>
+                        <li>تحليلات الموارد</li>
+                        <li>إدارة التغيير</li>
+                    </ul>
+                </div>
+
+                <!-- Payroll -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-money-check-alt"></i></div>
+                    <h3 class="en">Payroll & WPS</h3>
+                    <h3 class="ar" style="display:none">إدارة الرواتب</h3>
+                    <div class="badge">WPS - Wage Protection (حماية الأجور)</div>
+                    <p class="card-desc en">Accurate payroll with WPS compliance.</p>
+                    <p class="card-desc ar" style="display:none">معالجة دقيقة للرواتب مع الامتثال.</p>
+                    <ul class="list en">
+                        <li>Monthly payroll</li>
+                        <li>WPS file generation</li>
+                        <li>GOSI calculations</li>
+                        <li>End-of-service benefits</li>
+                        <li>Leave calculations</li>
+                        <li>Bilingual payslips</li>
+                        <li>Tax documentation</li>
+                        <li>Salary certificates</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>الرواتب الشهرية</li>
+                        <li>إنشاء ملف حماية الأجور</li>
+                        <li>حسابات التأمينات</li>
+                        <li>مكافأة نهاية الخدمة</li>
+                        <li>حسابات الإجازات</li>
+                        <li>كشوف ثنائية اللغة</li>
+                        <li>التوثيق الضريبي</li>
+                        <li>شهادات الراتب</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portals -->
+        <section class="sec" style="background:var(--slate-100)">
+            <div class="sec-head">
+                <span class="sec-tag">
+                    <span class="en">GOVERNMENT PORTALS</span>
+                    <span class="ar" style="display:none">البوابات الحكومية</span>
+                </span>
+                <h2 class="en">Expert Navigation of All Saudi Portals</h2>
+                <h2 class="ar" style="display:none">خبرة في جميع البوابات السعودية</h2>
+                <p class="en">Certified experts in all major government platforms.</p>
+                <p class="ar" style="display:none">خبراء معتمدون في جميع المنصات الحكومية.</p>
+            </div>
+
+            <div class="grid">
+                <div class="portal">
+                    <div class="portal-icon"><i class="fas fa-building"></i></div>
+                    <h3>Qiwa (قوى)</h3>
+                    <p class="portal-name en">Ministry of Human Resources & Social Development (MHRSD)</p>
+                    <p class="portal-name ar" style="display:none">وزارة الموارد البشرية والتنمية الاجتماعية</p>
+                    <p class="portal-desc en">Primary employment services platform.</p>
+                    <p class="portal-desc ar" style="display:none">المنصة الأساسية لخدمات التوظيف.</p>
+                </div>
+
+                <div class="portal">
+                    <div class="portal-icon"><i class="fas fa-file-signature"></i></div>
+                    <h3>Mudad (مدد)</h3>
+                    <p class="portal-name en">Electronic Labor Contracts Platform (MHRSD)</p>
+                    <p class="portal-name ar" style="display:none">منصة عقود العمل الإلكترونية</p>
+                    <p class="portal-desc en">Official contract management.</p>
+                    <p class="portal-desc ar" style="display:none">إدارة العقود الرسمية.</p>
+                </div>
+
+                <div class="portal">
+                    <div class="portal-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>GOSI (التأمينات)</h3>
+                    <p class="portal-name en">General Organization for Social Insurance</p>
+                    <p class="portal-name ar" style="display:none">المؤسسة العامة للتأمينات الاجتماعية</p>
+                    <p class="portal-desc en">Social insurance authority.</p>
+                    <p class="portal-desc ar" style="display:none">هيئة التأمينات الاجتماعية.</p>
+                </div>
+
+                <div class="portal">
+                    <div class="portal-icon"><i class="fas fa-id-card"></i></div>
+                    <h3>Muqeem (مقيم)</h3>
+                    <p class="portal-name en">Iqama & Immigration Services Platform</p>
+                    <p class="portal-name ar" style="display:none">منصة خدمات الإقامة والجوازات</p>
+                    <p class="portal-desc en">Residency services platform.</p>
+                    <p class="portal-desc ar" style="display:none">منصة خدمات الإقامة.</p>
+                </div>
+
+                <div class="portal">
+                    <div class="portal-icon"><i class="fas fa-globe-americas"></i></div>
+                    <h3>MOFA (الخارجية)</h3>
+                    <p class="portal-name en">Ministry of Foreign Affairs</p>
+                    <p class="portal-name ar" style="display:none">وزارة الخارجية</p>
+                    <p class="portal-desc en">Official attestation services.</p>
+                    <p class="portal-desc ar" style="display:none">خدمات التصديق الرسمية.</p>
+                </div>
+
+                <div class="portal">
+                    <div class="portal-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h3>NAQL (نقل)</h3>
+                    <p class="portal-name en">Employee Transfer Platform (MHRSD)</p>
+                    <p class="portal-name ar" style="display:none">منصة خدمات نقل الخدمات</p>
+                    <p class="portal-desc en">Transfer services platform.</p>
+                    <p class="portal-desc ar" style="display:none">منصة خدمات النقل.</p>
+                </div>
+
+                <div class="portal">
+                    <div class="portal-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>WPS (حماية الأجور)</h3>
+                    <p class="portal-name en">Wage Protection System (MHRSD)</p>
+                    <p class="portal-name ar" style="display:none">نظام حماية الأجور</p>
+                    <p class="portal-desc en">Wage transfer system.</p>
+                    <p class="portal-desc ar" style="display:none">نظام التحويل الإلكتروني.</p>
+                </div>
+
+                <div class="portal">
+                    <div class="portal-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Absher (أبشر)</h3>
+                    <p class="portal-name en">Ministry of Interior Platform</p>
+                    <p class="portal-name ar" style="display:none">منصة وزارة الداخلية</p>
+                    <p class="portal-desc en">Integrated government services.</p>
+                    <p class="portal-desc ar" style="display:none">خدمات حكومية متكاملة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="sec" id="contact-employers" style="background:var(--white)">
+            <div class="sec-head">
+                <span class="sec-tag">
+                    <span class="en">CONTACT US</span>
+                    <span class="ar" style="display:none">اتصل بنا</span>
+                </span>
+                <h2 class="en">Let's Transform Your HR Operations</h2>
+                <h2 class="ar" style="display:none">لنحول عمليات الموارد البشرية</h2>
+                <p class="en">Contact us for a free consultation.</p>
+                <p class="ar" style="display:none">اتصل بنا للحصول على استشارة مجانية.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-info">
+                            <h3 class="en">Phone</h3>
+                            <h3 class="ar" style="display:none">الهاتف</h3>
+                            <p><a href="tel:+966501446995">+966 50 144 6995</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contact-info">
+                            <h3 class="en">WhatsApp</h3>
+                            <h3 class="ar" style="display:none">واتساب</h3>
+                            <p><a href="https://wa.me/966501446995" target="_blank">+966 50 144 6995</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-info">
+                            <h3 class="en">Email</h3>
+                            <h3 class="ar" style="display:none">البريد</h3>
+                            <p><a href="mailto:info@smarthrpro.com">info@smarthrpro.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-info">
+                            <h3 class="en">Location</h3>
+                            <h3 class="ar" style="display:none">الموقع</h3>
+                            <p class="en">Riyadh, Saudi Arabia</p>
+                            <p class="ar" style="display:none">الرياض، المملكة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-wrap">
+                    <form onsubmit="handleForm(event,'employers')">
+                        <div class="field">
+                            <label class="en">Company Name</label>
+                            <label class="ar" style="display:none">اسم الشركة</label>
+                            <input type="text" name="company" required>
+                        </div>
+                        <div class="field">
+                            <label class="en">Contact Person</label>
+                            <label class="ar" style="display:none">الشخص المسؤول</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="field">
+                            <label class="en">Email</label>
+                            <label class="ar" style="display:none">البريد</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="field">
+                            <label class="en">Phone</label>
+                            <label class="ar" style="display:none">الهاتف</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                        <div class="field">
+                            <label class="en">Service</label>
+                            <label class="ar" style="display:none">الخدمة</label>
+                            <select name="service" required>
+                                <option value="" class="en">Select</option>
+                                <option value="Qiwa" class="en">Qiwa</option>
+                                <option value="Mudad" class="en">Mudad</option>
+                                <option value="GOSI" class="en">GOSI</option>
+                                <option value="Muqeem" class="en">Muqeem</option>
+                                <option value="MOFA" class="en">MOFA</option>
+                                <option value="NAQL" class="en">NAQL</option>
+                                <option value="HR" class="en">HR Consulting</option>
+                                <option value="Payroll" class="en">Payroll</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label class="en">Message</label>
+                            <label class="ar" style="display:none">الرسالة</label>
+                            <textarea name="message"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="en">Send Inquiry</span>
+                            <span class="ar" style="display:none">إرسال</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- EMPLOYEES PAGE -->
+    <div class="page-wrap" id="employees">
+        <!-- Hero -->
+        <section class="hero" id="home-employees" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);">
+            <div class="hero-content">
+                <h1 class="en">Facing Issues at Work? We Can Help You Get Your Rights</h1>
+                <h1 class="ar" style="display:none">تواجه مشاكل في العمل؟ نحن نساعدك في الحصول على حقوقك </h1>
+                
+                <p class="tagline en">Your Rights, Our Priority</p>
+                <p class="tagline ar" style="display:none">حقوقك، أولويتنا</p>
+                
+                <p class="en">Professional support for employees to resolve workplace issues, recover unpaid salaries, and protect your labor rights legally and professionally.</p>
+                <p class="ar" style="display:none">دعم احترافي للموظفين لحل مشاكل مكان العمل واسترداد الرواتب غير المدفوعة وحماية حقوقك العمالية قانونياً.</p>
+                
+                <div class="hero-btns">
+                    <button class="hero-btn hero-btn-1" onclick="goTo('contact')">
+                        <span class="en">Get Free Consultation</span>
+                        <span class="ar" style="display:none">احصل على استشارة مجانية</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="hero-btn hero-btn-2" onclick="goTo('services')">
+                        <span class="en">Learn More</span>
+                        <span class="ar" style="display:none">اعرف المزيد</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Employee Issues -->
+        <section class="sec" id="services-employees" style="background:var(--white)">
+            <div class="sec-head">
+                <span class="sec-tag" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="en">COMMON EMPLOYEE ISSUES</span>
+                    <span class="ar" style="display:none">قضايا الموظفين الشائعة</span>
+                </span>
+                <h2 class="en">Are You Facing Any of These Problems?</h2>
+                <h2 class="ar" style="display:none">هل تواجه أي من هذه المشاكل؟</h2>
+                <p class="en">We're here to support you — fairly and legally.</p>
+                <p class="ar" style="display:none">نحن هنا لدعمك - بشكل عادل وقانوني.</p>
+            </div>
+
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="card" style="border-left: 4px solid #186c77;">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-money-bill-wave"></i></div>
+                    <h3 class="en">Salary Not Paid?</h3>
+                    <h3 class="ar" style="display:none">الراتب غير مدفوع؟</h3>
+                    <p class="card-desc en">Unpaid salaries for months? We help you recover your earned wages through legal channels.</p>
+                    <p class="card-desc ar" style="display:none">رواتب غير مدفوعة لأشهر؟ نساعدك في استرداد أجورك المستحقة عبر القنوات القانونية.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #186c77;">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-user-slash"></i></div>
+                    <h3 class="en">Unlawful Termination?</h3>
+                    <h3 class="ar" style="display:none">إنهاء غير قانوني؟</h3>
+                    <p class="card-desc en">Fired without notice or proper compensation? We'll fight for your rights and ensure justice.</p>
+                    <p class="card-desc ar" style="display:none">تم فصلك بدون إشعار أو تعويض مناسب؟ سنناضل من أجل حقوقك ونضمن العدالة.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #186c77;">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-award"></i></div>
+                    <h3 class="en">End-of-Service Not Received?</h3>
+                    <h3 class="ar" style="display:none">مكافأة نهاية الخدمة غير مستلمة؟</h3>
+                    <p class="card-desc en">Your gratuity or end-of-service benefits are legally yours. We'll help you claim them.</p>
+                    <p class="card-desc ar" style="display:none">مكافأتك ومزايا نهاية الخدمة هي حقك القانوني. سنساعدك في المطالبة بها.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #186c77;">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-minus-circle"></i></div>
+                    <h3 class="en">Unfair Deductions?</h3>
+                    <h3 class="ar" style="display:none">خصومات غير عادلة؟</h3>
+                    <p class="card-desc en">Illegal salary cuts or delays in payments? We ensure your full rights are protected.</p>
+                    <p class="card-desc ar" style="display:none">تخفيضات غير قانونية في الراتب أو تأخيرات في الدفع؟ نضمن حماية حقوقك الكاملة.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #186c77;">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-id-card"></i></div>
+                    <h3 class="en">Iqama Not Renewed?</h3>
+                    <h3 class="ar" style="display:none">الإقامة غير مجددة؟</h3>
+                    <p class="card-desc en">Iqama blocked or not renewed? We provide legal support to resolve residency issues.</p>
+                    <p class="card-desc ar" style="display:none">الإقامة محظورة أو غير مجددة؟ نقدم الدعم القانوني لحل مشاكل الإقامة.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #186c77;">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-file-contract"></i></div>
+                    <h3 class="en">Contract Dispute?</h3>
+                    <h3 class="ar" style="display:none">نزاع في العقد؟</h3>
+                    <p class="card-desc en">False commitments or contract violations? We review and fight for your contractual rights.</p>
+                    <p class="card-desc ar" style="display:none">التزامات كاذبة أو انتهاكات للعقد؟ نراجع ونناضل من أجل حقوقك التعاقدية.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Do -->
+        <section class="sec" style="background:var(--slate-100)">
+            <div class="sec-head">
+                <span class="sec-tag" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);">
+                    <i class="fas fa-balance-scale"></i>
+                    <span class="en">WHAT WE DO</span>
+                    <span class="ar" style="display:none">ما نقوم به</span>
+                </span>
+                <h2 class="en">Complete Legal & Professional Support</h2>
+                <h2 class="ar" style="display:none">دعم قانوني واحترافي كامل</h2>
+                <p class="en">We handle everything from consultation to resolution.</p>
+                <p class="ar" style="display:none">نتعامل مع كل شيء من الاستشارة إلى الحل.</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-search"></i></div>
+                    <h3 class="en">Case Study & Consultation</h3>
+                    <h3 class="ar" style="display:none">دراسة الحالة والاستشارة</h3>
+                    <ul class="list en">
+                        <li>Free initial case discussion</li>
+                        <li>Detailed analysis of your situation</li>
+                        <li>Professional consultation on best approach</li>
+                        <li>Clear explanation of your rights</li>
+                        <li>Timeline and process walkthrough</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>مناقشة مجانية أولية للحالة</li>
+                        <li>تحليل مفصل لموقفك</li>
+                        <li>استشارة مهنية حول أفضل نهج</li>
+                        <li>شرح واضح لحقوقك</li>
+                        <li>شرح الجدول الزمني والعملية</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-balance-scale"></i></div>
+                    <h3 class="en">Legal Representation</h3>
+                    <h3 class="ar" style="display:none">التمثيل القانوني</h3>
+                    <ul class="list en">
+                        <li>Licensed lawyers for Labor Office representation</li>
+                        <li>Professional case preparation</li>
+                        <li>Attend hearings on your behalf</li>
+                        <li>Negotiate settlements with employers</li>
+                        <li>Full legal support throughout the process</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>محامون مرخصون للتمثيل في مكتب العمل</li>
+                        <li>إعداد احترافي للقضية</li>
+                        <li>حضور الجلسات نيابة عنك</li>
+                        <li>التفاوض على التسويات مع أصحاب العمل</li>
+                        <li>دعم قانوني كامل طوال العملية</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-file-alt"></i></div>
+                    <h3 class="en">Documentation & Filing</h3>
+                    <h3 class="ar" style="display:none">التوثيق والتقديم</h3>
+                    <ul class="list en">
+                        <li>Prepare and submit official complaints</li>
+                        <li>Draft contracts and resignation letters</li>
+                        <li>Review settlement agreements</li>
+                        <li>Assist with Labor Office appointments</li>
+                        <li>Complete documentation support</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>إعداد وتقديم الشكاوى الرسمية</li>
+                        <li>صياغة العقود وخطابات الاستقالة</li>
+                        <li>مراجعة اتفاقيات التسوية</li>
+                        <li>المساعدة في مواعيد مكتب العمل</li>
+                        <li>دعم التوثيق الكامل</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-money-check-alt"></i></div>
+                    <h3 class="en">Benefits Recovery</h3>
+                    <h3 class="ar" style="display:none">استرداد المزايا</h3>
+                    <ul class="list en">
+                        <li>End-of-service benefits calculation</li>
+                        <li>Unpaid salary recovery</li>
+                        <li>Leave entitlement claims</li>
+                        <li>Overtime payment recovery</li>
+                        <li>Full settlement negotiation</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>حساب مكافأة نهاية الخدمة</li>
+                        <li>استرداد الرواتب غير المدفوعة</li>
+                        <li>المطالبة باستحقاقات الإجازة</li>
+                        <li>استرداد مدفوعات العمل الإضافي</li>
+                        <li>التفاوض على التسوية الكاملة</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-calendar-check"></i></div>
+                    <h3 class="en">Follow-up & Support</h3>
+                    <h3 class="ar" style="display:none">المتابعة والدعم</h3>
+                    <ul class="list en">
+                        <li>Labor Office appointment scheduling</li>
+                        <li>Regular case status updates</li>
+                        <li>Follow-up until complete resolution</li>
+                        <li>Quick responses within 24-48 hours</li>
+                        <li>Expert advice throughout the journey</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>جدولة مواعيد مكتب العمل</li>
+                        <li>تحديثات منتظمة لحالة القضية</li>
+                        <li>المتابعة حتى الحل الكامل</li>
+                        <li>ردود سريعة خلال 24-48 ساعة</li>
+                        <li>نصائح الخبراء طوال الرحلة</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-language"></i></div>
+                    <h3 class="en">Translation & Certification</h3>
+                    <h3 class="ar" style="display:none">الترجمة والتصديق</h3>
+                    <ul class="list en">
+                        <li>Legal translations (Arabic/English)</li>
+                        <li>Affidavit preparation</li>
+                        <li>Document certification</li>
+                        <li>Court-approved translations</li>
+                        <li>Complete documentation services</li>
+                    </ul>
+                    <ul class="list ar" style="display:none">
+                        <li>الترجمات القانونية (عربي/إنجليزي)</li>
+                        <li>إعداد الإقرارات</li>
+                        <li>تصديق المستندات</li>
+                        <li>ترجمات معتمدة من المحكمة</li>
+                        <li>خدمات توثيق كاملة</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flexible Support -->
+        <section class="sec" style="background:var(--white)">
+            <div class="sec-head">
+                <span class="sec-tag" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span class="en">FLEXIBLE & TRANSPARENT SUPPORT</span>
+                    <span class="ar" style="display:none">دعم مرن وشفاف</span>
+                </span>
+                <h2 class="en">Affordable Options for Every Case</h2>
+                <h2 class="ar" style="display:none">خيارات ميسورة التكلفة لكل حالة</h2>
+                <p class="en">No hidden fees. Clear pricing. Step-by-step guidance.</p>
+                <p class="ar" style="display:none">لا توجد رسوم خفية. تسعير واضح. توجيه خطوة بخطوة.</p>
+            </div>
+
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="card" style="border-top: 4px solid #186c77;">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-gift"></i></div>
+                    <h3 class="en"><i class="fas fa-check-circle" style="color: #186c77;"></i> Free Initial Consultation</h3>
+                    <h3 class="ar" style="display:none">استشارة أولية مجانية</h3>
+                    <p class="card-desc en">Discuss your case with us at no cost. We'll assess your situation and guide you on the best path forward.</p>
+                    <p class="card-desc ar" style="display:none">ناقش قضيتك معنا دون أي تكلفة. سنقيم وضعك ونوجهك إلى أفضل طريق للمضي قدماً.</p>
+                </div>
+
+                <div class="card" style="border-top: 4px solid #186c77;">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-coins"></i></div>
+                    <h3 class="en"><i class="fas fa-check-circle" style="color: #186c77;"></i> Affordable Per-Case Pricing</h3>
+                    <h3 class="ar" style="display:none">تسعير ميسور لكل حالة</h3>
+                    <p class="card-desc en">Pay only for the services you need. Transparent pricing with no hidden charges.</p>
+                    <p class="card-desc ar" style="display:none">ادفع فقط مقابل الخدمات التي تحتاجها. تسعير شفاف بدون رسوم خفية.</p>
+                </div>
+
+                <div class="card" style="border-top: 4px solid #186c77;">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-calendar-alt"></i></div>
+                    <h3 class="en"><i class="fas fa-check-circle" style="color: #186c77;"></i> Monthly Advisory Options</h3>
+                    <h3 class="ar" style="display:none">خيارات استشارية شهرية</h3>
+                    <p class="card-desc en">Need ongoing support? We offer monthly advisory packages for continuous assistance.</p>
+                    <p class="card-desc ar" style="display:none">تحتاج دعماً مستمراً؟ نقدم باقات استشارية شهرية للمساعدة المستمرة.</p>
+                </div>
+
+                <div class="card" style="border-top: 4px solid #186c77;">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-tasks"></i></div>
+                    <h3 class="en"><i class="fas fa-check-circle" style="color: #186c77;"></i> Step-by-Step Guidance</h3>
+                    <h3 class="ar" style="display:none">توجيه خطوة بخطوة</h3>
+                    <p class="card-desc en">We guide you through every step until your case is fully resolved. You're never alone.</p>
+                    <p class="card-desc ar" style="display:none">نوجهك في كل خطوة حتى يتم حل قضيتك بالكامل. أنت لست وحدك أبداً.</p>
+                </div>
+
+                <div class="card" style="border-top: 4px solid #186c77;">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #142b4b 0%, #186c77 100%);"><i class="fas fa-clock"></i></div>
+                    <h3 class="en"><i class="fas fa-check-circle" style="color: #186c77;"></i> Quick Expert Response</h3>
+                    <h3 class="ar" style="display:none">استجابة خبير سريعة</h3>
+                    <p class="card-desc en">Get expert advice within 24-48 hours. We respond quickly to your concerns.</p>
+                    <p class="card-desc ar" style="display:none">احصل على مشورة الخبراء خلال 24-48 ساعة. نستجيب بسرعة لمخاوفك.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Multilingual Support -->
+        <section class="sec" style="background: linear-gradient(135deg, #1e5a8e 0%, #16496e 100%); color: white;">
+            <div class="sec-head">
+                <span class="sec-tag" style="background: white; color: #1e5a8e;">
+                    <i class="fas fa-globe"></i>
+                    <span class="en">MULTILINGUAL ASSISTANCE</span>
+                    <span class="ar" style="display:none">المساعدة متعددة اللغات</span>
+                </span>
+                <h2 class="en" style="color: white;">We Speak Your Language</h2>
+                <h2 class="ar" style="display:none; color: white;">نتحدث لغتك</h2>
+                <p class="en" style="color: rgba(255,255,255,0.9);">Professional support available in multiple languages</p>
+                <p class="ar" style="display:none; color: rgba(255,255,255,0.9);">دعم احترافي متاح بلغات متعددة</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap;">
+                <div style="text-align: center; padding: 1.2rem 1.8rem; background: rgba(255,255,255,0.15); border-radius: 12px; backdrop-filter: blur(10px); transition: all 0.3s ease; border: 2px solid rgba(255,255,255,0.2);" onmouseover="this.style.background='rgba(255,255,255,0.25)'; this.style.borderColor='rgba(255,255,255,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'; this.style.borderColor='rgba(255,255,255,0.2)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;"><i class="fas fa-language" style="color: white;"></i></div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem; font-weight: 600;">English</h3>
+                    <p style="font-size: 0.85rem; opacity: 0.9;">English</p>
+                </div>
+
+                <div style="text-align: center; padding: 1.2rem 1.8rem; background: rgba(255,255,255,0.15); border-radius: 12px; backdrop-filter: blur(10px); transition: all 0.3s ease; border: 2px solid rgba(255,255,255,0.2);" onmouseover="this.style.background='rgba(255,255,255,0.25)'; this.style.borderColor='rgba(255,255,255,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'; this.style.borderColor='rgba(255,255,255,0.2)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;"><i class="fas fa-language" style="color: white;"></i></div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem; font-weight: 600;">العربية</h3>
+                    <p style="font-size: 0.85rem; opacity: 0.9;">Arabic</p>
+                </div>
+
+                <div style="text-align: center; padding: 1.2rem 1.8rem; background: rgba(255,255,255,0.15); border-radius: 12px; backdrop-filter: blur(10px); transition: all 0.3s ease; border: 2px solid rgba(255,255,255,0.2);" onmouseover="this.style.background='rgba(255,255,255,0.25)'; this.style.borderColor='rgba(255,255,255,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'; this.style.borderColor='rgba(255,255,255,0.2)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;"><i class="fas fa-language" style="color: white;"></i></div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem; font-weight: 600;">اردو</h3>
+                    <p style="font-size: 0.85rem; opacity: 0.9;">Urdu</p>
+                </div>
+
+                <div style="text-align: center; padding: 1.2rem 1.8rem; background: rgba(255,255,255,0.15); border-radius: 12px; backdrop-filter: blur(10px); transition: all 0.3s ease; border: 2px solid rgba(255,255,255,0.2);" onmouseover="this.style.background='rgba(255,255,255,0.25)'; this.style.borderColor='rgba(255,255,255,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'; this.style.borderColor='rgba(255,255,255,0.2)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;"><i class="fas fa-language" style="color: white;"></i></div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem; font-weight: 600;">हिंदी</h3>
+                    <p style="font-size: 0.85rem; opacity: 0.9;">Hindi</p>
+                </div>
+
+                <div style="text-align: center; padding: 1.2rem 1.8rem; background: rgba(255,255,255,0.15); border-radius: 12px; backdrop-filter: blur(10px); transition: all 0.3s ease; border: 2px solid rgba(255,255,255,0.2);" onmouseover="this.style.background='rgba(255,255,255,0.25)'; this.style.borderColor='rgba(255,255,255,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'; this.style.borderColor='rgba(255,255,255,0.2)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;"><i class="fas fa-language" style="color: white;"></i></div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem; font-weight: 600;">ਪੰਜਾਬੀ</h3>
+                    <p style="font-size: 0.85rem; opacity: 0.9;">Punjabi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Urgency Section -->
+        <section class="sec urgency-section" style="background: #fee; border-left: 5px solid #dc2626;">
+            <div class="sec-head">
+                <span class="sec-tag" style="background: #dc2626;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span class="en">WHY YOU SHOULD ACT NOW</span>
+                    <span class="ar" style="display:none">لماذا يجب أن تتصرف الآن</span>
+                </span>
+                <h2 class="en" style="color: #dc2626;">Don't Let Your Rights Go Unheard</h2>
+                <h2 class="ar" style="display:none; color: #dc2626;">لا تدع حقوقك تذهب دون أن يسمعها أحد</h2>
+                <p class="en" style="color: #991b1b;">Delaying action can result in serious consequences:</p>
+                <p class="ar" style="display:none; color: #991b1b;">تأخير العمل يمكن أن يؤدي إلى عواقب خطيرة:</p>
+            </div>
+
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="card" style="border-left: 4px solid #dc2626; background: white;">
+                    <div class="card-icon" style="background: #dc2626;"><i class="fas fa-hourglass-end"></i></div>
+                    <h3 class="en"><i class="fas fa-exclamation-circle" style="color: #dc2626;"></i> Expired Complaint Window</h3>
+                    <h3 class="ar" style="display:none"><i class="fas fa-exclamation-circle" style="color: #dc2626;"></i> انتهاء فترة الشكوى</h3>
+                    <p class="card-desc en">Labor Office complaints have time limits. Act before it's too late.</p>
+                    <p class="card-desc ar" style="display:none">شكاوى مكتب العمل لها حدود زمنية. تصرف قبل فوات الأوان.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #dc2626; background: white;">
+                    <div class="card-icon" style="background: #dc2626;"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3 class="en"><i class="fas fa-exclamation-circle" style="color: #dc2626;"></i> Lost Benefits</h3>
+                    <h3 class="ar" style="display:none"><i class="fas fa-exclamation-circle" style="color: #dc2626;"></i> فقدان المزايا</h3>
+                    <p class="card-desc en">Your end-of-service benefits can be lost if you don't file claims in time.</p>
+                    <p class="card-desc ar" style="display:none">يمكن فقدان مزايا نهاية الخدمة إذا لم تقدم المطالبات في الوقت المناسب.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #dc2626; background: white;">
+                    <div class="card-icon" style="background: #dc2626;"><i class="fas fa-running"></i></div>
+                    <h3 class="en"><i class="fas fa-exclamation-circle" style="color: #dc2626;"></i> Employer Escaping</h3>
+                    <h3 class="ar" style="display:none"><i class="fas fa-exclamation-circle" style="color: #dc2626;"></i> هروب صاحب العمل</h3>
+                    <p class="card-desc en">Employers may block Iqama or leave without settling dues. Act fast.</p>
+                    <p class="card-desc ar" style="display:none">قد يقوم أصحاب العمل بحظر الإقامة أو المغادرة دون تسوية المستحقات. تصرف بسرعة.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #dc2626; background: white;">
+                    <div class="card-icon" style="background: #dc2626;"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3 class="en"><i class="fas fa-exclamation-circle" style="color: #dc2626;"></i> Unrecorded Claims</h3>
+                    <h3 class="ar" style="display:none"><i class="fas fa-exclamation-circle" style="color: #dc2626;"></i> مطالبات غير مسجلة</h3>
+                    <p class="card-desc en">Without proper documentation, salary claims become difficult to prove.</p>
+                    <p class="card-desc ar" style="display:none">بدون توثيق مناسب، تصبح مطالبات الراتب صعبة الإثبات.</p>
+                </div>
+            </div>
+
+            <div class="urgency-cta" style="text-align: center; margin-top: 2rem; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 16px rgba(220, 38, 38, 0.1);">
+                <h3 class="en" style="font-size: 1.4rem; color: #dc2626; margin-bottom: 1rem;">Don't Wait — Take Action Today!</h3>
+                <h3 class="ar" style="display:none; font-size: 1.4rem; color: #dc2626; margin-bottom: 1rem;">لا تنتظر - اتخذ إجراءً اليوم!</h3>
+                <button class="hero-btn hero-btn-1" style="background: #dc2626; padding: 1rem 2.5rem;" onclick="goTo('contact')">
+                    <span class="en">Get Free Consultation Now</span>
+                    <span class="ar" style="display:none">احصل على استشارة مجانية الآن</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="sec" id="contact-employees" style="background:var(--slate-100)">
+            <div class="sec-head">
+                <span class="sec-tag">
+                    <span class="en">CONTACT</span>
+                    <span class="ar" style="display:none">اتصل بنا</span>
+                </span>
+                <h2 class="en">Get Professional Support Today</h2>
+                <h2 class="ar" style="display:none">احصل على الدعم اليوم</h2>
+                <p class="en">Reach out for expert guidance.</p>
+                <p class="ar" style="display:none">تواصل للحصول على إرشادات.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-info">
+                            <h3 class="en">Phone</h3>
+                            <h3 class="ar" style="display:none">الهاتف</h3>
+                            <p><a href="tel:+966501446995">+966 50 144 6995</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contact-info">
+                            <h3 class="en">WhatsApp</h3>
+                            <h3 class="ar" style="display:none">واتساب</h3>
+                            <p><a href="https://wa.me/966501446995" target="_blank">+966 50 144 6995</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-info">
+                            <h3 class="en">Email</h3>
+                            <h3 class="ar" style="display:none">البريد</h3>
+                            <p><a href="mailto:info@smarthrpro.com">info@smarthrpro.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-info">
+                            <h3 class="en">Location</h3>
+                            <h3 class="ar" style="display:none">الموقع</h3>
+                            <p class="en">Riyadh, KSA</p>
+                            <p class="ar" style="display:none">الرياض</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-wrap">
+                    <form onsubmit="handleForm(event,'employees')">
+                        <div class="field">
+                            <label class="en">Full Name</label>
+                            <label class="ar" style="display:none">الاسم</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="field">
+                            <label class="en">Email</label>
+                            <label class="ar" style="display:none">البريد</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="field">
+                            <label class="en">Phone</label>
+                            <label class="ar" style="display:none">الهاتف</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                        <div class="field">
+                            <label class="en">Service</label>
+                            <label class="ar" style="display:none">الخدمة</label>
+                            <select name="service" required>
+                                <option value="" class="en">Select</option>
+                                <option value="Rights" class="en">Employment Rights</option>
+                                <option value="Iqama" class="en">Iqama Services</option>
+                                <option value="Transfer" class="en">Job Transfer</option>
+                                <option value="Salary" class="en">Salary Review</option>
+                                <option value="Dispute" class="en">Dispute Support</option>
+                                <option value="Career" class="en">Career Development</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label class="en">Message</label>
+                            <label class="ar" style="display:none">الرسالة</label>
+                            <textarea name="message"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="en">Send Inquiry</span>
+                            <span class="ar" style="display:none">إرسال</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-brand-info">
+                    <h3>Smart HR Pro</h3>
+                    <p class="en">Your Strategic HR Partner</p>
+                    <p class="ar" style="display:none">شريكك الاستراتيجي للموارد البشرية</p>
+                    <p class="footer-tagline en">Transforming HR management across Saudi Arabia with innovative solutions, expert guidance, and unmatched dedication to excellence.</p>
+                    <p class="footer-tagline ar" style="display:none">تحويل إدارة الموارد البشرية في جميع أنحاء المملكة العربية السعودية بحلول مبتكرة وإرشادات الخبراء والتفاني الذي لا مثيل له للتميز.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-sec">
+                <h4 class="en">
+                    <i class="fas fa-building"></i> Company Services
+                </h4>
+                <h4 class="ar" style="display:none">
+                    <i class="fas fa-building"></i> خدمات الشركات
+                </h4>
+                <ul class="footer-links">
+                    <li><a href="javascript:switchTab('employers'); goTo('services');" class="en"><i class="fas fa-angle-right"></i> Qiwa Platform Management</a><a href="javascript:switchTab('employers'); goTo('services');" class="ar" style="display:none"><i class="fas fa-angle-left"></i> إدارة منصة قوى</a></li>
+                    <li><a href="javascript:switchTab('employers'); goTo('services');" class="en"><i class="fas fa-angle-right"></i> Mudad Contract Services</a><a href="javascript:switchTab('employers'); goTo('services');" class="ar" style="display:none"><i class="fas fa-angle-left"></i> خدمات عقود مدد</a></li>
+                    <li><a href="javascript:switchTab('employers'); goTo('services');" class="en"><i class="fas fa-angle-right"></i> GOSI Registration</a><a href="javascript:switchTab('employers'); goTo('services');" class="ar" style="display:none"><i class="fas fa-angle-left"></i> تسجيل التأمينات</a></li>
+                    <li><a href="javascript:switchTab('employers'); goTo('services');" class="en"><i class="fas fa-angle-right"></i> Payroll Management</a><a href="javascript:switchTab('employers'); goTo('services');" class="ar" style="display:none"><i class="fas fa-angle-left"></i> إدارة الرواتب</a></li>
+                    <li><a href="javascript:switchTab('employers'); goTo('services');" class="en"><i class="fas fa-angle-right"></i> Immigration Services</a><a href="javascript:switchTab('employers'); goTo('services');" class="ar" style="display:none"><i class="fas fa-angle-left"></i> خدمات الهجرة</a></li>
+                    <li><a href="javascript:switchTab('employers'); goTo('services');" class="en"><i class="fas fa-angle-right"></i> HR Consulting</a><a href="javascript:switchTab('employers'); goTo('services');" class="ar" style="display:none"><i class="fas fa-angle-left"></i> استشارات الموارد البشرية</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-sec">
+                <h4 class="en">
+                    <i class="fas fa-users"></i> Individual Support
+                </h4>
+                <h4 class="ar" style="display:none">
+                    <i class="fas fa-users"></i> دعم الأفراد
+                </h4>
+                <ul class="footer-links">
+                    <li><a href="javascript:switchTab('employees'); goTo('services');" class="en"><i class="fas fa-angle-right"></i> Labor Rights Protection</a><a href="javascript:switchTab('employees'); goTo('services');" class="ar" style="display:none"><i class="fas fa-angle-left"></i> حماية حقوق العمال</a></li>
+                    <li><a href="javascript:switchTab('employees'); goTo('services');" class="en"><i class="fas fa-angle-right"></i> Salary Recovery</a><a href="javascript:switchTab('employees'); goTo('services');" class="ar" style="display:none"><i class="fas fa-angle-left"></i> استرداد الراتب</a></li>
+                    <li><a href="javascript:switchTab('employees'); goTo('services');" class="en"><i class="fas fa-angle-right"></i> Legal Representation</a><a href="javascript:switchTab('employees'); goTo('services');" class="ar" style="display:none"><i class="fas fa-angle-left"></i> التمثيل القانوني</a></li>
+                    <li><a href="javascript:switchTab('employees'); goTo('services');" class="en"><i class="fas fa-angle-right"></i> Contract Disputes</a><a href="javascript:switchTab('employees'); goTo('services');" class="ar" style="display:none"><i class="fas fa-angle-left"></i> نزاعات العقود</a></li>
+                    <li><a href="javascript:switchTab('employees'); goTo('services');" class="en"><i class="fas fa-angle-right"></i> End-of-Service Benefits</a><a href="javascript:switchTab('employees'); goTo('services');" class="ar" style="display:none"><i class="fas fa-angle-left"></i> مزايا نهاية الخدمة</a></li>
+                    <li><a href="javascript:switchTab('employees'); goTo('services');" class="en"><i class="fas fa-angle-right"></i> Free Consultation</a><a href="javascript:switchTab('employees'); goTo('services');" class="ar" style="display:none"><i class="fas fa-angle-left"></i> استشارة مجانية</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-sec">
+                <h4 class="en">
+                    <i class="fas fa-landmark"></i> Government Portals
+                </h4>
+                <h4 class="ar" style="display:none">
+                    <i class="fas fa-landmark"></i> البوابات الحكومية
+                </h4>
+                <ul class="footer-links">
+                    <li class="en"><i class="fas fa-check-circle"></i> Qiwa (قوى)</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> قوى</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> Mudad (مدد)</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> مدد</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> GOSI (التأمينات)</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> التأمينات الاجتماعية</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> Muqeem (مقيم)</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> مقيم</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> Absher (أبشر)</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> أبشر</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> MOFA (وزارة الخارجية)</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> وزارة الخارجية</li>
+                </ul>
+            </div>
+
+            <div class="footer-sec footer-contact">
+                <h4 class="en">
+                    <i class="fas fa-phone-alt"></i> Get In Touch
+                </h4>
+                <h4 class="ar" style="display:none">
+                    <i class="fas fa-phone-alt"></i> تواصل معنا
+                </h4>
+                <ul class="footer-links footer-contact-list">
+                    <li>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong class="en">Office Location</strong>
+                                <strong class="ar" style="display:none">موقع المكتب</strong>
+                                <p class="en">Riyadh, Saudi Arabia</p>
+                                <p class="ar" style="display:none">الرياض، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong class="en">Phone</strong>
+                                <strong class="ar" style="display:none">الهاتف</strong>
+                                <p><a href="tel:+966501446995">+966 50 144 6995</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong class="en">Email</strong>
+                                <strong class="ar" style="display:none">البريد الإلكتروني</strong>
+                                <p><a href="mailto:info@smarthrpro.com">info@smarthrpro.com</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="footer-contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <p><a href="https://wa.me/966501446995" target="_blank">+966 50 144 6995</a></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                
+                <div class="footer-social">
+                    <h5 class="en">Follow Us</h5>
+                    <h5 class="ar" style="display:none">تابعنا</h5>
+                    <div class="social-icons">
+                        <a href="https://wa.me/966501446995" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-certifications">
+            <div class="cert-item">
+                <i class="fas fa-award"></i>
+                <div>
+                    <strong class="en">Professional Team</strong>
+                    <strong class="ar" style="display:none">فريق محترف</strong>
+                    <p class="en">Expert HR consultants</p>
+                    <p class="ar" style="display:none">مستشارو موارد بشرية خبراء</p>
+                </div>
+            </div>
+            <div class="cert-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                    <strong class="en">Trusted Service</strong>
+                    <strong class="ar" style="display:none">خدمة موثوقة</strong>
+                    <p class="en">Reliable HR solutions</p>
+                    <p class="ar" style="display:none">حلول موارد بشرية موثوقة</p>
+                </div>
+            </div>
+            <div class="cert-item">
+                <i class="fas fa-handshake"></i>
+                <div>
+                    <strong class="en">Client Satisfaction</strong>
+                    <strong class="ar" style="display:none">رضا العملاء</strong>
+                    <p class="en">Dedicated to excellence</p>
+                    <p class="ar" style="display:none">ملتزمون بالتميز</p>
+                </div>
+            </div>
+            <div class="cert-item">
+                <i class="fas fa-headset"></i>
+                <div>
+                    <strong class="en">24/7 Support</strong>
+                    <strong class="ar" style="display:none">دعم 24/7</strong>
+                    <p class="en">Always here for you</p>
+                    <p class="ar" style="display:none">دائماً هنا من أجلك</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-copy">
+                    <p class="en">&copy; 2025 Smart HR Pro. All rights reserved.</p>
+                    <p class="ar" style="display:none">&copy; 2025 سمارت اتش ار برو. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="footer-links-bottom">
+                    <a href="#" class="en">Privacy Policy</a>
+                    <a href="#" class="ar" style="display:none">سياسة الخصوصية</a>
+                    <span>|</span>
+                    <a href="#" class="en">Terms of Service</a>
+                    <a href="#" class="ar" style="display:none">شروط الخدمة</a>
+                    <span>|</span>
+                    <a href="#" class="en">Cookie Policy</a>
+                    <a href="#" class="ar" style="display:none">سياسة ملفات تعريف الارتباط</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <button class="scroll-btn" id="scroll" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        let dark=false,lang='en',page='employers';
+        
+        function toggleTheme(){
+            dark=!dark;
+            document.body.classList.toggle('dark');
+            document.getElementById('theme').innerHTML=dark?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>';
+            localStorage.setItem('theme',dark?'dark':'light');
+        }
+        
+        function toggleLang(){
+            lang=lang==='en'?'ar':'en';
+            document.body.classList.toggle('rtl');
+            const e=document.querySelectorAll('.en'),a=document.querySelectorAll('.ar');
+            if(lang==='ar'){
+                e.forEach(el=>el.style.display='none');
+                a.forEach(el=>el.style.display='');
+                document.documentElement.setAttribute('lang','ar');
+                document.documentElement.setAttribute('dir','rtl');
+            }else{
+                e.forEach(el=>el.style.display='');
+                a.forEach(el=>el.style.display='none');
+                document.documentElement.setAttribute('lang','en');
+                document.documentElement.setAttribute('dir','ltr');
+            }
+            localStorage.setItem('lang',lang);
+        }
+        
+        function switchTab(p){
+            page=p;
+            document.querySelectorAll('.page-wrap').forEach(pg=>pg.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(t=>t.classList.remove('active'));
+            document.getElementById(p).classList.add('active');
+            document.getElementById(p==='employers'?'tab1':'tab2').classList.add('active');
+            
+            // Update header navigation active states
+            document.querySelectorAll('nav a').forEach(link=>{
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if((p==='employers' && href.includes("switchTab('employers')")) || 
+                   (p==='employees' && href.includes("switchTab('employees')"))) {
+                    link.classList.add('active');
+                }
+            });
+            
+            window.scrollTo({top:0,behavior:'smooth'});
+        }
+        
+        function toggleMenu(){
+            document.getElementById('nav').classList.toggle('show');
+        }
+        
+        function goTo(id){
+            const sections={
+                'home':page==='employers'?'home-employers':'home-employees',
+                'services':page==='employers'?'services-employers':'services-employees',
+                'contact':page==='employers'?'contact-employers':'contact-employees'
+            };
+            const el=document.getElementById(sections[id]||id);
+            if(el){
+                const offset=110;
+                const pos=el.getBoundingClientRect().top+window.pageYOffset-offset;
+                window.scrollTo({top:pos,behavior:'smooth'});
+            }
+            document.getElementById('nav').classList.remove('show');
+        }
+        
+        function handleForm(e,type){
+            e.preventDefault();
+            const form = e.target;
+            const service = form.service.value;
+            const name = type==='employers'?form.company.value:form.name.value;
+            const email = form.email.value;
+            const phone = form.phone.value;
+            const message = form.message?form.message.value:'';
+            
+            // Create email content
+            const subject = `Smart HR Pro Inquiry - ${service}`;
+            const body = `
+Name/Company: ${name}
+Email: ${email}
+Phone: ${phone}
+Service: ${service}
+Message: ${message}
+
+---
+Sent from Smart HR Pro Website
+            `.trim();
+            
+            // Open mailto link
+            window.location.href = `mailto:info@smarthrpro.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Show success message
+            const msg = lang==='en'
+                ?`Thank you ${name}!\n\nYour inquiry has been prepared. Your default email client will open to send the message to info@smarthrpro.com\n\nAlternatively, you can also contact us:\nWhatsApp: +966 50 144 6995\nEmail: info@smarthrpro.com\n\nBest regards,\nSmart HR Pro`
+                :`شكراً ${name}!\n\nتم إعداد استفسارك. سيفتح عميل البريد الإلكتروني الافتراضي لإرسال الرسالة إلى info@smarthrpro.com\n\nيمكنك أيضاً التواصل معنا:\nواتساب: +966 50 144 6995\nبريد: info@smarthrpro.com\n\nمع التحيات،\nسمارت اتش ار برو`;
+            
+            setTimeout(() => {
+                alert(msg);
+                form.reset();
+            }, 500);
+        }
+        
+        window.addEventListener('DOMContentLoaded',()=>{
+            if(localStorage.getItem('theme')==='dark')toggleTheme();
+            if(localStorage.getItem('lang')==='ar')toggleLang();
+            
+            // Set initial active state for header navigation
+            document.querySelectorAll('nav a').forEach(link=>{
+                const href = link.getAttribute('href');
+                if(href.includes("switchTab('employers')")) {
+                    link.classList.add('active');
+                }
+            });
+            
+            const obs=new IntersectionObserver((entries)=>{
+                entries.forEach(entry=>{
+                    if(entry.isIntersecting){
+                        entry.target.style.opacity='1';
+                        entry.target.style.transform='translateY(0)';
+                    }
+                });
+            },{threshold:0.1});
+            
+            document.querySelectorAll('.card,.portal').forEach(el=>{
+                el.style.opacity='0';
+                el.style.transform='translateY(20px)';
+                el.style.transition='opacity 0.6s ease, transform 0.6s ease';
+                obs.observe(el);
+            });
+            
+            const scroll=document.getElementById('scroll');
+            window.addEventListener('scroll',()=>{
+                if(window.pageYOffset>300){
+                    scroll.classList.add('show');
+                }else{
+                    scroll.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
