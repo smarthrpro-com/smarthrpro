@@ -14,10 +14,10 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23132b4d;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23047857;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='18' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-size='48' font-weight='900' fill='white' text-anchor='middle'%3EHR%3C/text%3E%3C/svg%3E">
     <link rel="alternate icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJYSURBVHgB7ZdNSBRRGIbfmZ1xHMcZR3FERBHEIKKDRBBBLYoWLaJFi6BVixbtWrRo0aJFixYtWrRo0aJFixYtWrRo0aJFixYtWgQRRFBEEEXz/3vfN84M4zjqzIyL6IEHL8w3933vvO/3zYwQhmEYhmEYhmEYhmH8X5AQDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwjP8LUsIwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMP4vyAlDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMw/i9ICcMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwjP8LUsIwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDOP/gpQwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMP4vyAlDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMw/i9ICcMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwjP8LUsIwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDOP/gpQwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMP4vyAlDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMw/i9ICcMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwjP8LUsIwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDOP/gpQwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMP4vyAlDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMw/i9ICcMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwjP8LUsIwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDOP/gpQwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMP4vyAlDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMw/i9ICcMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwjP8LvwHpSvQ3h6h3GQAAAABJRU5ErkJggg==">
     
-    <!-- Open Sans Font -->
+    <!-- Open Sans and Noto Sans Arabic Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -38,7 +38,7 @@
         }
 
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: "Open Sans", "Noto Sans Arabic", sans-serif;
             color: var(--slate-900);
             background: var(--slate-100);
             line-height: 1.3;
@@ -1073,7 +1073,10 @@
             opacity: 0.85;
             font-size: 0.9rem;
             line-height: 1.4;
-        }
+	    /* add only these two lines */
+	    text-align: center;
+	    margin: 0 auto;
+	}
 
         .footer-grid {
             max-width: 1400px;
@@ -1872,7 +1875,8 @@
                     <div class="card-icon"><i class="fas fa-user-tie"></i></div>
                     <h3 class="en">Qiwa Platform</h3>
                     <h3 class="ar" style="display:none">منصة قوى</h3>
-                    <div class="badge">Qiwa (قوى) - MHRSD</div>
+                    <div class="badge en">Qiwa - MHRSD</div>
+                    <div class="badge ar" style="display:none">قوى - وزارة الموارد البشرية</div>
                     <p class="card-desc en">Complete Qiwa platform management from Ministry of Human Resources and Social Development. We handle all aspects of your workforce registration, compliance monitoring, and government platform navigation to ensure your business meets all Saudi labor requirements.</p>
                     <p class="card-desc ar" style="display:none">إدارة كاملة لمنصة قوى من وزارة الموارد البشرية. نتعامل مع جميع جوانب تسجيل القوى العاملة ومراقبة الامتثال والتنقل في المنصة الحكومية لضمان تلبية عملك لجميع متطلبات العمل السعودية.</p>
                     <ul class="list en">
@@ -1902,7 +1906,8 @@
                     <div class="card-icon"><i class="fas fa-file-contract"></i></div>
                     <h3 class="en">Mudad Contracts</h3>
                     <h3 class="ar" style="display:none">عقود مدد</h3>
-                    <div class="badge">Mudad (مدد) - Labor Contracts</div>
+                    <div class="badge en">Mudad - Labor Contracts</div>
+                    <div class="badge ar" style="display:none">مدد - عقود العمل</div>
                     <p class="card-desc en">Expert labor contract management through Mudad platform.</p>
                     <p class="card-desc ar" style="display:none">إدارة احترافية لعقود العمل عبر مدد.</p>
                     <ul class="list en">
@@ -1932,7 +1937,8 @@
                     <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
                     <h3 class="en">GOSI Services</h3>
                     <h3 class="ar" style="display:none">خدمات التأمينات</h3>
-                    <div class="badge">GOSI (التأمينات) - Social Insurance</div>
+                    <div class="badge en">GOSI - Social Insurance</div>
+                    <div class="badge ar" style="display:none">التأمينات - التأمينات الاجتماعية</div>
                     <p class="card-desc en">Complete social insurance management through GOSI.</p>
                     <p class="card-desc ar" style="display:none">إدارة كاملة للتأمينات الاجتماعية.</p>
                     <ul class="list en">
@@ -1962,7 +1968,8 @@
                     <div class="card-icon"><i class="fas fa-passport"></i></div>
                     <h3 class="en">Muqeem Immigration</h3>
                     <h3 class="ar" style="display:none">خدمات مقيم</h3>
-                    <div class="badge">Muqeem (مقيم) - Immigration</div>
+                    <div class="badge en">Muqeem - Immigration</div>
+                    <div class="badge ar" style="display:none">مقيم - الجوازات</div>
                     <p class="card-desc en">Comprehensive immigration and residency services.</p>
                     <p class="card-desc ar" style="display:none">خدمات شاملة للهجرة والإقامة.</p>
                     <ul class="list en">
@@ -1992,7 +1999,8 @@
                     <div class="card-icon"><i class="fas fa-globe"></i></div>
                     <h3 class="en">MOFA Attestation</h3>
                     <h3 class="ar" style="display:none">تصديق الخارجية</h3>
-                    <div class="badge">MOFA - Ministry of Foreign Affairs (الخارجية)</div>
+                    <div class="badge en">MOFA</div>
+                    <div class="badge ar" style="display:none">وزارة الخارجية</div>
                     <p class="card-desc en">Professional document attestation services.</p>
                     <p class="card-desc ar" style="display:none">خدمات تصديق احترافية للمستندات.</p>
                     <ul class="list en">
@@ -2014,36 +2022,6 @@
                         <li>مصادقة الغرفة</li>
                         <li>الترجمة والتوثيق</li>
                         <li>الخدمات السريعة</li>
-                    </ul>
-                </div>
-
-                <!-- NAQL -->
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-truck"></i></div>
-                    <h3 class="en">NAQL Services</h3>
-                    <h3 class="ar" style="display:none">خدمات نقل</h3>
-                    <div class="badge">NAQL (نقل) - Ministry of Transportation</div>
-                    <p class="card-desc en">Professional handling of transport and logistics licensing through NAQL platform under the Transport General Authority (TGA), Ministry of Transportation.</p>
-                    <p class="card-desc ar" style="display:none">معالجة احترافية لتراخيص النقل والخدمات اللوجستية من خلال منصة نقل تحت الهيئة العامة للنقل، وزارة النقل.</p>
-                    <ul class="list en">
-                        <li>Transport license applications</li>
-                        <li>Commercial vehicle registration</li>
-                        <li>Driver permit processing</li>
-                        <li>Fleet management documentation</li>
-                        <li>License renewal services</li>
-                        <li>Compliance verification</li>
-                        <li>TGA platform navigation</li>
-                        <li>Transport sector regulations</li>
-                    </ul>
-                    <ul class="list ar" style="display:none">
-                        <li>طلبات تراخيص النقل</li>
-                        <li>تسجيل المركبات التجارية</li>
-                        <li>معالجة تصاريح السائقين</li>
-                        <li>وثائق إدارة الأسطول</li>
-                        <li>خدمات تجديد التراخيص</li>
-                        <li>التحقق من الامتثال</li>
-                        <li>التنقل في منصة الهيئة</li>
-                        <li>لوائح قطاع النقل</li>
                     </ul>
                 </div>
 
@@ -2081,7 +2059,8 @@
                     <div class="card-icon"><i class="fas fa-money-check-alt"></i></div>
                     <h3 class="en">Payroll & WPS</h3>
                     <h3 class="ar" style="display:none">إدارة الرواتب</h3>
-                    <div class="badge">WPS - Wage Protection (حماية الأجور)</div>
+                    <div class="badge en">WPS - Wage Protection</div>
+                    <div class="badge ar" style="display:none">حماية الأجور</div>
                     <p class="card-desc en">Accurate payroll with WPS compliance.</p>
                     <p class="card-desc ar" style="display:none">معالجة دقيقة للرواتب مع الامتثال.</p>
                     <ul class="list en">
@@ -2124,7 +2103,8 @@
             <div class="grid">
                 <div class="portal">
                     <div class="portal-icon"><i class="fas fa-building"></i></div>
-                    <h3>Qiwa (قوى)</h3>
+                    <h3 class="en">Qiwa</h3>
+                    <h3 class="ar" style="display:none">قوى</h3>
                     <p class="portal-name en">Ministry of Human Resources & Social Development (MHRSD)</p>
                     <p class="portal-name ar" style="display:none">وزارة الموارد البشرية والتنمية الاجتماعية</p>
                     <p class="portal-desc en">Primary employment services platform.</p>
@@ -2133,7 +2113,8 @@
 
                 <div class="portal">
                     <div class="portal-icon"><i class="fas fa-file-signature"></i></div>
-                    <h3>Mudad (مدد)</h3>
+                    <h3 class="en">Mudad</h3>
+                    <h3 class="ar" style="display:none">مدد</h3>
                     <p class="portal-name en">Electronic Labor Contracts Platform (MHRSD)</p>
                     <p class="portal-name ar" style="display:none">منصة عقود العمل الإلكترونية</p>
                     <p class="portal-desc en">Official contract management.</p>
@@ -2142,7 +2123,8 @@
 
                 <div class="portal">
                     <div class="portal-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>GOSI (التأمينات)</h3>
+                    <h3 class="en">GOSI</h3>
+                    <h3 class="ar" style="display:none">التأمينات</h3>
                     <p class="portal-name en">General Organization for Social Insurance</p>
                     <p class="portal-name ar" style="display:none">المؤسسة العامة للتأمينات الاجتماعية</p>
                     <p class="portal-desc en">Social insurance authority.</p>
@@ -2151,7 +2133,8 @@
 
                 <div class="portal">
                     <div class="portal-icon"><i class="fas fa-id-card"></i></div>
-                    <h3>Muqeem (مقيم)</h3>
+                    <h3 class="en">Muqeem</h3>
+                    <h3 class="ar" style="display:none">مقيم</h3>
                     <p class="portal-name en">Iqama & Immigration Services Platform</p>
                     <p class="portal-name ar" style="display:none">منصة خدمات الإقامة والجوازات</p>
                     <p class="portal-desc en">Residency services platform.</p>
@@ -2160,7 +2143,8 @@
 
                 <div class="portal">
                     <div class="portal-icon"><i class="fas fa-globe-americas"></i></div>
-                    <h3>MOFA (الخارجية)</h3>
+                    <h3 class="en">MOFA</h3>
+                    <h3 class="ar" style="display:none">وزارة الخارجية</h3>
                     <p class="portal-name en">Ministry of Foreign Affairs</p>
                     <p class="portal-name ar" style="display:none">وزارة الخارجية</p>
                     <p class="portal-desc en">Official attestation services.</p>
@@ -2168,31 +2152,73 @@
                 </div>
 
                 <div class="portal">
-                    <div class="portal-icon"><i class="fas fa-exchange-alt"></i></div>
-                    <h3>NAQL (نقل)</h3>
-                    <p class="portal-name en">Employee Transfer Platform (MHRSD)</p>
-                    <p class="portal-name ar" style="display:none">منصة خدمات نقل الخدمات</p>
-                    <p class="portal-desc en">Transfer services platform.</p>
-                    <p class="portal-desc ar" style="display:none">منصة خدمات النقل.</p>
+                    <div class="portal-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3 class="en">MISA</h3>
+                    <h3 class="ar" style="display:none">ميسا</h3>
+                    <p class="portal-name en">Investment Services Platform</p>
+                    <p class="portal-name ar" style="display:none">منصة الخدمات الاستثمارية</p>
+                    <p class="portal-desc en">Business licensing platform.</p>
+                    <p class="portal-desc ar" style="display:none">منصة التراخيص التجارية.</p>
                 </div>
 
                 <div class="portal">
-                    <div class="portal-icon"><i class="fas fa-hand-holding-usd"></i></div>
-                    <h3>WPS (حماية الأجور)</h3>
-                    <p class="portal-name en">Wage Protection System (MHRSD)</p>
-                    <p class="portal-name ar" style="display:none">نظام حماية الأجور</p>
-                    <p class="portal-desc en">Wage transfer system.</p>
-                    <p class="portal-desc ar" style="display:none">نظام التحويل الإلكتروني.</p>
+                    <div class="portal-icon"><i class="fas fa-city"></i></div>
+                    <h3 class="en">Balady</h3>
+                    <h3 class="ar" style="display:none">بلدي</h3>
+                    <p class="portal-name en">Municipal Services Platform</p>
+                    <p class="portal-name ar" style="display:none">منصة الخدمات البلدية</p>
+                    <p class="portal-desc en">Municipal licensing services.</p>
+                    <p class="portal-desc ar" style="display:none">خدمات التراخيص البلدية.</p>
                 </div>
 
                 <div class="portal">
-                    <div class="portal-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>Absher (أبشر)</h3>
-                    <p class="portal-name en">Ministry of Interior Platform</p>
-                    <p class="portal-name ar" style="display:none">منصة وزارة الداخلية</p>
-                    <p class="portal-desc en">Integrated government services.</p>
-                    <p class="portal-desc ar" style="display:none">خدمات حكومية متكاملة.</p>
+                    <div class="portal-icon"><i class="fas fa-store"></i></div>
+                    <h3 class="en">Ministry of Commerce</h3>
+                    <h3 class="ar" style="display:none">وزارة التجارة</h3>
+                    <p class="portal-name en">Ministry of Commerce</p>
+                    <p class="portal-name ar" style="display:none">وزارة التجارة</p>
+                    <p class="portal-desc en">Commercial registration services.</p>
+                    <p class="portal-desc ar" style="display:none">خدمات السجل التجاري.</p>
                 </div>
+
+                <div class="portal">
+                    <div class="portal-icon"><i class="fas fa-building"></i></div>
+                    <h3 class="en">Saudi Business Center</h3>
+                    <h3 class="ar" style="display:none">مركز الأعمال السعودي</h3>
+                    <p class="portal-name en">Saudi Business Center</p>
+                    <p class="portal-name ar" style="display:none">مركز الأعمال السعودي</p>
+                    <p class="portal-desc en">Unified business services.</p>
+                    <p class="portal-desc ar" style="display:none">خدمات الأعمال الموحدة.</p>
+                </div>
+
+                <div class="portal">
+                    <div class="portal-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3 class="en">MHRSD</h3>
+                    <h3 class="ar" style="display:none">وزارة الموارد البشرية</h3>
+                    <p class="portal-name en">Ministry of Human Resources</p>
+                    <p class="portal-name ar" style="display:none">وزارة الموارد البشرية</p>
+                    <p class="portal-desc en">HR regulations platform.</p>
+                    <p class="portal-desc ar" style="display:none">منصة أنظمة الموارد البشرية.</p>
+                </div>
+
+                <div class="portal">
+                    <div class="portal-icon"><i class="fas fa-receipt"></i></div>
+                    <h3 class="en">VAT and Zakat</h3>
+                    <h3 class="ar" style="display:none">ضريبة القيمة المضافة والزكاة</h3>
+                    <p class="portal-name en">Zakat, Tax and Customs Authority</p>
+                    <p class="portal-name ar" style="display:none">هيئة الزكاة والضريبة والجمارك</p>
+                    <p class="portal-desc en">Tax compliance services.</p>
+                    <p class="portal-desc ar" style="display:none">خدمات الامتثال الضريبي.</p>
+                </div>
+
+                <div class="portal">
+                    <div class="portal-icon"><i class="fas fa-handshake"></i></div>
+                    <h3 class="en">Chamber of Commerce</h3>
+                    <h3 class="ar" style="display:none">الغرفة التجارية</h3>
+                    <p class="portal-name en">Saudi Chambers of Commerce</p>
+                    <p class="portal-name ar" style="display:none">الغرف التجارية السعودية</p>
+                    <p class="portal-desc en">Business membership services.</p>
+                    <p class="portal-desc ar" style="display:none">خدمات العضوية التجارية.</p>
             </div>
         </section>
 
@@ -2250,7 +2276,11 @@
                 </div>
 
                 <div class="form-wrap">
-                    <form onsubmit="handleForm(event,'employers')">
+                    <form action="https://formsubmit.co/info@smarthrpro.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New Website Form Submission - Company">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="text" name="_honey" style="display:none">
                         <div class="field">
                             <label class="en">Company Name</label>
                             <label class="ar" style="display:none">اسم الشركة</label>
@@ -2275,15 +2305,36 @@
                             <label class="en">Service</label>
                             <label class="ar" style="display:none">الخدمة</label>
                             <select name="service" required>
-                                <option value="" class="en">Select</option>
+                                <option value="" class="en">Select Service</option>
+                                <option value="" class="ar" style="display:none">اختر الخدمة</option>
                                 <option value="Qiwa" class="en">Qiwa</option>
+                                <option value="Qiwa" class="ar" style="display:none">قوى</option>
                                 <option value="Mudad" class="en">Mudad</option>
+                                <option value="Mudad" class="ar" style="display:none">مدد</option>
                                 <option value="GOSI" class="en">GOSI</option>
+                                <option value="GOSI" class="ar" style="display:none">التأمينات</option>
                                 <option value="Muqeem" class="en">Muqeem</option>
+                                <option value="Muqeem" class="ar" style="display:none">مقيم</option>
                                 <option value="MOFA" class="en">MOFA</option>
-                                <option value="NAQL" class="en">NAQL</option>
-                                <option value="HR" class="en">HR Consulting</option>
-                                <option value="Payroll" class="en">Payroll</option>
+                                <option value="MOFA" class="ar" style="display:none">وزارة الخارجية</option>
+                                <option value="MISA" class="en">MISA</option>
+                                <option value="MISA" class="ar" style="display:none">ميسا</option>
+                                <option value="Balady" class="en">Balady</option>
+                                <option value="Balady" class="ar" style="display:none">بلدي</option>
+                                <option value="Ministry of Commerce" class="en">Ministry of Commerce</option>
+                                <option value="Ministry of Commerce" class="ar" style="display:none">وزارة التجارة</option>
+                                <option value="Saudi Business Center" class="en">Saudi Business Center</option>
+                                <option value="Saudi Business Center" class="ar" style="display:none">مركز الأعمال السعودي</option>
+                                <option value="MHRSD" class="en">MHRSD</option>
+                                <option value="MHRSD" class="ar" style="display:none">وزارة الموارد البشرية</option>
+                                <option value="VAT and Zakat" class="en">VAT and Zakat</option>
+                                <option value="VAT and Zakat" class="ar" style="display:none">ضريبة القيمة المضافة والزكاة</option>
+                                <option value="Chamber of Commerce" class="en">Chamber of Commerce</option>
+                                <option value="Chamber of Commerce" class="ar" style="display:none">الغرفة التجارية</option>
+                                <option value="HR Consulting" class="en">HR Consulting</option>
+                                <option value="HR Consulting" class="ar" style="display:none">استشارات الموارد البشرية</option>
+                                <option value="Payroll" class="en">Payroll Management</option>
+                                <option value="Payroll" class="ar" style="display:none">إدارة الرواتب</option>
                             </select>
                         </div>
                         <div class="field">
@@ -2749,7 +2800,11 @@
                 </div>
 
                 <div class="form-wrap">
-                    <form onsubmit="handleForm(event,'employees')">
+                    <form action="https://formsubmit.co/info@smarthrpro.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New Website Form Submission - Employee">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="text" name="_honey" style="display:none">
                         <div class="field">
                             <label class="en">Full Name</label>
                             <label class="ar" style="display:none">الاسم</label>
@@ -2769,13 +2824,24 @@
                             <label class="en">Service</label>
                             <label class="ar" style="display:none">الخدمة</label>
                             <select name="service" required>
-                                <option value="" class="en">Select</option>
-                                <option value="Rights" class="en">Employment Rights</option>
-                                <option value="Iqama" class="en">Iqama Services</option>
-                                <option value="Transfer" class="en">Job Transfer</option>
-                                <option value="Salary" class="en">Salary Review</option>
-                                <option value="Dispute" class="en">Dispute Support</option>
-                                <option value="Career" class="en">Career Development</option>
+                                <option value="" class="en">Select Service</option>
+                                <option value="" class="ar" style="display:none">اختر الخدمة</option>
+                                <option value="Employment Rights" class="en">Employment Rights</option>
+                                <option value="Employment Rights" class="ar" style="display:none">حقوق العمل</option>
+                                <option value="Iqama Services" class="en">Iqama Services</option>
+                                <option value="Iqama Services" class="ar" style="display:none">خدمات الإقامة</option>
+                                <option value="Job Transfer" class="en">Job Transfer</option>
+                                <option value="Job Transfer" class="ar" style="display:none">نقل الكفالة</option>
+                                <option value="Salary Issues" class="en">Salary Issues</option>
+                                <option value="Salary Issues" class="ar" style="display:none">مشاكل الراتب</option>
+                                <option value="Labor Dispute" class="en">Labor Dispute</option>
+                                <option value="Labor Dispute" class="ar" style="display:none">نزاعات عمالية</option>
+                                <option value="Contract Review" class="en">Contract Review</option>
+                                <option value="Contract Review" class="ar" style="display:none">مراجعة العقد</option>
+                                <option value="End of Service" class="en">End of Service Benefits</option>
+                                <option value="End of Service" class="ar" style="display:none">مكافأة نهاية الخدمة</option>
+                                <option value="Career Development" class="en">Career Development</option>
+                                <option value="Career Development" class="ar" style="display:none">التطوير الوظيفي</option>
                             </select>
                         </div>
                         <div class="field">
@@ -2850,18 +2916,30 @@
                     <i class="fas fa-landmark"></i> البوابات الحكومية
                 </h4>
                 <ul class="footer-links">
-                    <li class="en"><i class="fas fa-check-circle"></i> Qiwa (قوى)</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> Qiwa</li>
                     <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> قوى</li>
-                    <li class="en"><i class="fas fa-check-circle"></i> Mudad (مدد)</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> Mudad</li>
                     <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> مدد</li>
-                    <li class="en"><i class="fas fa-check-circle"></i> GOSI (التأمينات)</li>
-                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> التأمينات الاجتماعية</li>
-                    <li class="en"><i class="fas fa-check-circle"></i> Muqeem (مقيم)</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> GOSI</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> التأمينات</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> Muqeem</li>
                     <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> مقيم</li>
-                    <li class="en"><i class="fas fa-check-circle"></i> Absher (أبشر)</li>
-                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> أبشر</li>
-                    <li class="en"><i class="fas fa-check-circle"></i> MOFA (وزارة الخارجية)</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> MOFA</li>
                     <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> وزارة الخارجية</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> MISA</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> ميسا</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> Balady</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> بلدي</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> Ministry of Commerce</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> وزارة التجارة</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> Saudi Business Center</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> مركز الأعمال السعودي</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> MHRSD</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> وزارة الموارد البشرية</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> VAT and Zakat</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> ضريبة القيمة المضافة والزكاة</li>
+                    <li class="en"><i class="fas fa-check-circle"></i> Chamber of Commerce</li>
+                    <li class="ar" style="display:none"><i class="fas fa-check-circle"></i> الغرفة التجارية</li>
                 </ul>
             </div>
 
@@ -2922,16 +3000,16 @@
                         <a href="https://wa.me/966501446995" target="_blank" aria-label="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="#" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/company/smarthrpro" target="_blank" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" aria-label="Twitter">
+                        <a href="https://x.com/smarthrpro" target="_blank" aria-label="X (Twitter)">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" aria-label="Facebook">
+                        <a href="https://www.facebook.com/smarthrpro" target="_blank" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" aria-label="Instagram">
+                        <a href="https://www.instagram.com/smarthrpro.com" target="_blank" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -2997,23 +3075,6 @@
             </div>
         </div>
         </div>
-<!-- Contact Section Start -->
-<div id="contact" class="contact-section">
-    <h2>Contact Us</h2>
-    <form action="https://formsubmit.co/info@smarthrpro.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://www.smarthrpro.com/thank-you.html">
-        <input type="text" name="_honey" style="display:none">
-
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-
-        <button type="submit">Send</button>
-    </form>
-</div>
-<!-- Contact Section End -->
-
     </footer>
 
     <!-- Scroll Top -->
@@ -3088,42 +3149,6 @@
             document.getElementById('nav').classList.remove('show');
         }
         
-        function handleForm(e,type){
-            e.preventDefault();
-            const form = e.target;
-            const service = form.service.value;
-            const name = type==='employers'?form.company.value:form.name.value;
-            const email = form.email.value;
-            const phone = form.phone.value;
-            const message = form.message?form.message.value:'';
-            
-            // Create email content
-            const subject = `Smart HR Pro Inquiry - ${service}`;
-            const body = `
-Name/Company: ${name}
-Email: ${email}
-Phone: ${phone}
-Service: ${service}
-Message: ${message}
-
----
-Sent from Smart HR Pro Website
-            `.trim();
-            
-            // Open mailto link
-            window.location.href = `mailto:info@smarthrpro.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
-            // Show success message
-            const msg = lang==='en'
-                ?`Thank you ${name}!\n\nYour inquiry has been prepared. Your default email client will open to send the message to info@smarthrpro.com\n\nAlternatively, you can also contact us:\nWhatsApp: +966 50 144 6995\nEmail: info@smarthrpro.com\n\nBest regards,\nSmart HR Pro`
-                :`شكراً ${name}!\n\nتم إعداد استفسارك. سيفتح عميل البريد الإلكتروني الافتراضي لإرسال الرسالة إلى info@smarthrpro.com\n\nيمكنك أيضاً التواصل معنا:\nواتساب: +966 50 144 6995\nبريد: info@smarthrpro.com\n\nمع التحيات،\nسمارت اتش ار برو`;
-            
-            setTimeout(() => {
-                alert(msg);
-                form.reset();
-            }, 500);
-        }
-        
         window.addEventListener('DOMContentLoaded',()=>{
             if(localStorage.getItem('theme')==='dark')toggleTheme();
             if(localStorage.getItem('lang')==='ar')toggleLang();
@@ -3148,17 +3173,12 @@ Sent from Smart HR Pro Website
             document.querySelectorAll('.card,.portal').forEach(el=>{
                 el.style.opacity='0';
                 el.style.transform='translateY(20px)';
-                el.style.transition='opacity 0.6s ease, transform 0.6s ease';
                 obs.observe(el);
             });
             
             const scroll=document.getElementById('scroll');
             window.addEventListener('scroll',()=>{
-                if(window.pageYOffset>300){
-                    scroll.classList.add('show');
-                }else{
-                    scroll.classList.remove('show');
-                }
+                scroll.style.display=window.pageYOffset>300?'flex':'none';
             });
         });
     </script>
