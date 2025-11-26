@@ -2260,7 +2260,7 @@
                         <div class="contact-info">
                             <h3 class="en">Email</h3>
                             <h3 class="ar" style="display:none">البريد</h3>
-                            <p><a href="mailto:info@smarthrpro.com">info@smarthrpro.com</a></p>
+                            <p><a href="/cdn-cgi/l/email-protection#bad3d4dcd5fac9d7dbc8ced2c8cac8d594d9d5d7"><span class="__cf_email__" data-cfemail="90f9fef6ffd0e3fdf1e2e4f8e2e0e2ffbef3fffd">[email&#160;protected]</span></a></p>
                         </div>
                     </div>
 
@@ -2784,7 +2784,7 @@
                         <div class="contact-info">
                             <h3 class="en">Email</h3>
                             <h3 class="ar" style="display:none">البريد</h3>
-                            <p><a href="mailto:info@smarthrpro.com">info@smarthrpro.com</a></p>
+                            <p><a href="/cdn-cgi/l/email-protection#aec7c0c8c1eeddc3cfdcdac6dcdedcc180cdc1c3"><span class="__cf_email__" data-cfemail="ee87808881ae9d838f9c9a869c9e9c81c08d8183">[email&#160;protected]</span></a></p>
                         </div>
                     </div>
 
@@ -2978,7 +2978,7 @@
                             <div>
                                 <strong class="en">Email</strong>
                                 <strong class="ar" style="display:none">البريد الإلكتروني</strong>
-                                <p><a href="mailto:info@smarthrpro.com">info@smarthrpro.com</a></p>
+                                <p><a href="/cdn-cgi/l/email-protection#3e575058517e4d535f4c4a564c4e4c51105d5153"><span class="__cf_email__" data-cfemail="274e49414867544a4655534f555755480944484a">[email&#160;protected]</span></a></p>
                             </div>
                         </div>
                     </li>
@@ -3082,7 +3082,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         let dark=false,lang='en',page='employers';
         
         function toggleTheme(){
@@ -3169,18 +3169,476 @@
                     }
                 });
             },{threshold:0.1});
+            document.querySelectorAll('.card,.portal,.list').forEach(el=>obs.observe(el));
             
-            document.querySelectorAll('.card,.portal').forEach(el=>{
-                el.style.opacity='0';
-                el.style.transform='translateY(20px)';
-                obs.observe(el);
+            // Enhanced Scroll Button Show/Hide
+            const scrollBtn = document.getElementById('scroll');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    scrollBtn.classList.add('show');
+                } else {
+                    scrollBtn.classList.remove('show');
+                }
             });
             
-            const scroll=document.getElementById('scroll');
-            window.addEventListener('scroll',()=>{
-                scroll.style.display=window.pageYOffset>300?'flex':'none';
-            });
+            // Initialize chat and WhatsApp features
+            initChatPopup();
         });
+        
+        // Live Chat Popup Functions
+        function initChatPopup() {
+            const chatPopup = document.getElementById('chatPopup');
+            const chatIcon = document.getElementById('chatIcon');
+            const minimizeChat = document.getElementById('minimizeChat');
+            const closeChat = document.getElementById('closeChat');
+            
+            chatIcon.addEventListener('click', () => {
+                chatPopup.classList.add('active');
+                chatIcon.style.display = 'none';
+            });
+            
+            minimizeChat.addEventListener('click', () => {
+                chatPopup.classList.remove('active');
+                chatIcon.style.display = 'flex';
+            });
+            
+            closeChat.addEventListener('click', () => {
+                chatPopup.classList.remove('active');
+                chatIcon.style.display = 'flex';
+            });
+        }
+        
+        function submitChat(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            
+            // Submit to FormSubmit.co
+            fetch('https://formsubmit.co/ajax/info@smarthrpro.com', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success === "true" || data.message) {
+                    alert(lang === 'ar' ? 'تم إرسال رسالتك بنجاح!' : 'Message sent successfully!');
+                    form.reset();
+                    document.getElementById('chatPopup').classList.remove('active');
+                    document.getElementById('chatIcon').style.display = 'flex';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert(lang === 'ar' ? 'حدث خطأ. يرجى المحاولة مرة أخرى.' : 'An error occurred. Please try again.');
+            });
+        }
     </script>
+
+    <!-- WhatsApp Floating Bubble -->
+    <a href="https://wa.me/966501446995" target="_blank" class="whatsapp-bubble" aria-label="Contact us on WhatsApp" id="whatsappBubble">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Live Chat Icon -->
+    <div class="chat-icon" id="chatIcon">
+        <i class="fas fa-comments"></i>
+        <span class="chat-badge en">Chat</span>
+        <span class="chat-badge ar" style="display:none">دردشة</span>
+    </div>
+
+    <!-- Live Chat Popup -->
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-header">
+            <div class="chat-header-content">
+                <i class="fas fa-comments"></i>
+                <div>
+                    <h4 class="en">Live Chat</h4>
+                    <h4 class="ar" style="display:none">الدردشة المباشرة</h4>
+                    <p class="en">We'll respond shortly</p>
+                    <p class="ar" style="display:none">سنرد قريباً</p>
+                </div>
+            </div>
+            <div class="chat-actions">
+                <button id="minimizeChat" aria-label="Minimize chat">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button id="closeChat" aria-label="Close chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="chat-body">
+            <form onsubmit="submitChat(event)" class="chat-form">
+                <input type="hidden" name="_subject" value="New Live Chat Message from Smart HR Pro">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="chat-field">
+                    <label class="en">Name *</label>
+                    <label class="ar" style="display:none">الاسم *</label>
+                    <input type="text" name="name" required placeholder="">
+                </div>
+                
+                <div class="chat-field">
+                    <label class="en">Email *</label>
+                    <label class="ar" style="display:none">البريد الإلكتروني *</label>
+                    <input type="email" name="email" required placeholder="">
+                </div>
+                
+                <div class="chat-field">
+                    <label class="en">Phone</label>
+                    <label class="ar" style="display:none">الهاتف</label>
+                    <input type="tel" name="phone" placeholder="">
+                </div>
+                
+                <div class="chat-field">
+                    <label class="en">Message *</label>
+                    <label class="ar" style="display:none">الرسالة *</label>
+                    <textarea name="message" rows="4" required placeholder=""></textarea>
+                </div>
+                
+                <button type="submit" class="chat-submit">
+                    <span class="en">Send Message</span>
+                    <span class="ar" style="display:none">إرسال الرسالة</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        /* WhatsApp Floating Bubble */
+        .whatsapp-bubble {
+            position: fixed;
+            bottom: 100px;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 998;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+        }
+
+        .whatsapp-bubble:hover {
+            transform: scale(1.1) translateY(-4px);
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-bubble i {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* RTL positioning for WhatsApp bubble */
+        body.rtl .whatsapp-bubble {
+            right: auto;
+            left: 2rem;
+        }
+
+        /* Live Chat Icon */
+        .chat-icon {
+            position: fixed;
+            bottom: 170px;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 4px 20px rgba(20, 43, 75, 0.4);
+            cursor: pointer;
+            z-index: 997;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .chat-icon:hover {
+            transform: scale(1.1) translateY(-4px);
+            box-shadow: 0 6px 24px rgba(20, 43, 75, 0.5);
+        }
+
+        .chat-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--emerald-500);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        body.rtl .chat-icon {
+            right: auto;
+            left: 2rem;
+        }
+
+        body.rtl .chat-badge {
+            right: auto;
+            left: -8px;
+        }
+
+        /* Live Chat Popup */
+        .chat-popup {
+            position: fixed;
+            bottom: 170px;
+            right: 2rem;
+            width: 360px;
+            max-width: calc(100vw - 4rem);
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.95);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .chat-popup.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        body.rtl .chat-popup {
+            right: auto;
+            left: 2rem;
+        }
+
+        body.dark .chat-popup {
+            background: #1e293b;
+            border: 1px solid #334155;
+        }
+
+        .chat-header {
+            background: var(--gradient);
+            color: white;
+            padding: 1rem 1.25rem;
+            border-radius: 16px 16px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .chat-header-content {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .chat-header-content i {
+            font-size: 24px;
+        }
+
+        .chat-header-content h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .chat-header-content p {
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .chat-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chat-actions button {
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .chat-actions button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .chat-body {
+            padding: 1.5rem;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .chat-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .chat-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .chat-field label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--slate-700);
+        }
+
+        body.dark .chat-field label {
+            color: #f8fafc;
+        }
+
+        .chat-field input,
+        .chat-field textarea {
+            padding: 0.75rem;
+            border: 1.5px solid var(--slate-200);
+            border-radius: 8px;
+            font-family: "Open Sans", "Noto Sans Arabic", sans-serif;
+            font-size: 0.875rem;
+            color: var(--slate-900);
+            background: var(--white);
+            transition: all 0.2s;
+        }
+
+        body.dark .chat-field input,
+        body.dark .chat-field textarea {
+            background: #0f172a;
+            border-color: #334155;
+            color: #f8fafc;
+        }
+
+        .chat-field input:focus,
+        .chat-field textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(24, 108, 119, 0.1);
+        }
+
+        .chat-field textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .chat-submit {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 0.875rem 1.5rem;
+            border-radius: 8px;
+            font-family: "Open Sans", "Noto Sans Arabic", sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            margin-top: 0.5rem;
+        }
+
+        .chat-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(20, 43, 75, 0.3);
+        }
+
+        .chat-submit:active {
+            transform: translateY(0);
+        }
+
+        /* Enhanced Scroll Button in RTL */
+        body.rtl .scroll-btn {
+            right: auto;
+            left: 2rem;
+        }
+
+        /* Mobile Responsive Adjustments */
+        @media (max-width: 768px) {
+            .whatsapp-bubble,
+            .chat-icon {
+                width: 56px;
+                height: 56px;
+                font-size: 24px;
+            }
+
+            .whatsapp-bubble {
+                bottom: 90px;
+                right: 1.5rem;
+            }
+
+            .chat-icon {
+                bottom: 155px;
+                right: 1.5rem;
+            }
+
+            body.rtl .whatsapp-bubble,
+            body.rtl .chat-icon {
+                right: auto;
+                left: 1.5rem;
+            }
+
+            .chat-popup {
+                bottom: 20px;
+                right: 1rem;
+                left: 1rem;
+                width: calc(100% - 2rem);
+                max-width: none;
+            }
+
+            body.rtl .chat-popup {
+                right: 1rem;
+                left: 1rem;
+            }
+
+            .scroll-btn {
+                bottom: 1.5rem;
+                right: 1.5rem;
+                width: 44px;
+                height: 44px;
+            }
+
+            body.rtl .scroll-btn {
+                right: auto;
+                left: 1.5rem;
+            }
+        }
+
+        /* Ensure all floating elements don't overlap */
+        @media (max-width: 480px) {
+            .whatsapp-bubble {
+                bottom: 80px;
+            }
+
+            .chat-icon {
+                bottom: 145px;
+            }
+        }
+    </style>
+
 </body>
 </html>
